@@ -1,0 +1,18 @@
+Shows how to make a function/procedure and how to use it.
+Function should only print 'function/procedure'. //keep it simple you id10t
+NOTHING higher level then functions... keep in simple... leave the higher level stuff for another file
+more adhoc, no strict way to demonstrait
+
+Class
+	private veriable
+	public int method //anumber
+
+function
+	arg handleing
+	global/local variables
+	default variables
+
+main
+	t1 = new class
+	t1.method
+	test

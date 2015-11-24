@@ -1,0 +1,3 @@
+This folder is showing some coding structures common to all programming languages
+things like looping, functions, selective structures, etc...
+Note: code in here doesn't have to follow proper programming practice, it's assumed the programmer know's what their doing, and is formatted to get commands (the commands accociated with them) conveyed

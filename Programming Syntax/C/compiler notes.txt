@@ -1,0 +1,19 @@
+/**
+ * Auture: 
+ * Description: Some notes on the compiler in C
+**/
+
+preprocessor
+	does text replacement
+	IE:
+		#include <stdio.h>
+		#define ARBITRARY 5654.5
+		inline int function(){return 0} //'inline' makes the compiler replace the function call with the actual code for the function
+		
+compiler
+	parses the program, performs optimization, and produces assembly code
+	//the compiler can optimize the code BUT it may couse an increase in the amount of error
+Assembler
+	Translates assembly code into machine code
+Linker
+	Combines object files and libraries into an executable file. It resolves any remaining symbol references

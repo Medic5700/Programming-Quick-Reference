@@ -1,0 +1,22 @@
+function binary(int t0)
+	string t1
+	for j:[0,32)
+		if t0 mod 2 = 0
+			t1 = "0" + t1
+		else
+			t1 = "1" + t1
+		t0 = t0/2
+	//or something like this
+	return t1
+
+function number(string t1)
+	int t2
+	for i:[0,32)
+		t2 = t2*2
+		if t1[i] == '1'
+			t2 = t2+1
+	return t2
+
+Main
+	for i:[0,255]
+		print i + "\t=\t" + binary(i) + "\t=\t" + number(binary(i))

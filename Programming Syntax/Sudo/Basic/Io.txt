@@ -1,0 +1,4 @@
+standerd input/standard output
+read from a file
+write to a file
+//may need a bin folder for the accossiated files...

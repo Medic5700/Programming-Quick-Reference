@@ -1,0 +1,285 @@
+Starting SWI Prolog.
+--------------------
+
+To start the prolog interpreter type 'swipl'
+
+
+Using SWI Prolog.
+-----------------
+
+As soon as you start up SWI Prolog, you will see the message:
+
+Welcome to SWI-Prolog (Multi-threaded, 32 bits, Version 5.10.0)
+Copyright (c) 1990-2010 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?-
+
+Goals/queries in Prolog are entered by the user following the '?- ' prompt.
+
+You can access the help information by typing
+
+?- help(help).
+
+as the introductory message above says.
+
+To load (or "consult") a file called file.pl, use either of:
+    consult('file.pl').
+    consult(file).
+    ['file.pl'].
+    [file].
+
+Note the dot (".") at the end.
+
+For this to work, make sure that you have started prolog in the
+directory where you have saved your file.
+
+To define some predicates without having to first save them to file,
+consult "user":
+    [user].
+
+Then, Prolog will present you with the following prompt:
+
+|:
+
+And you can type in your predicates as you would in a text editor (but
+you cannot edit a line after you have pressed enter.) To exit this
+mode, press Ctrl+D. Then Prolog will parse your predicates and make
+them accessible.
+
+For example, you can enter the biggerthan42 predicate as follows:
+
+?- [user].
+|: biggerthan42(X) :- X > 42.
+|: % user://1 compiled 0.00 sec, 332 bytes
+true.
+
+?- biggerthan42(2).
+false.
+
+?- biggerthan42(50).
+true.
+
+?-               
+
+It's a good idea, however, to get in the habit of using files most of the
+time, because what you type here will be lost as soon as SWI exits.
+
+To exit SWI:
+    halt.
+or
+    Ctrl-D
+
+Using predicates.
+-----------------
+
+Consider the builtin predicate member/2,(i.e., the predicate "member"
+with 2 arguments) which succeeds if the first argument is a member of
+a the second arument, a list. A sample session with it might
+look like this (note that text between /* and */ is not part of the
+output:
+
+?- member(1, [2,5,6,7,1]).   /* user types this */
+true ;                       /* Prolog answers true. User presses ; */
+false.                       /* Prolog answers false.
+                                That is, member(1, [2,5,6,7,1]) is
+                                true and there is one way of proving it.*/ 
+
+?- member(4, [2,5,6,7,1]).   /* user types this */
+false.                       /* Prolog answers this */
+
+?- member(X, [2,5,6,7,1]).   /* user types this */
+X = 2 ;                      /* Prolog answers X = 2 User types ; */
+X = 5 ;
+X = 6 ;
+X = 7 ;
+X = 1 ;
+false.                        /* No more solutions / proofs. */
+
+?-                              
+
+Debugging in SWI Prolog.
+------------------------
+
+For full details on debugging in SWI Prolog, read sections 2.9 and
+4.39 of the documentation at www.swi-prolog.org.
+
+Here are a few specifics:
+
+Traces: those let you see every call one by one.
+    Turning trace on:
+        trace.
+    Turning trace off:
+        notrace.
+
+*****************************
+* To use a nice GUI, choose *
+*   gtrace.                 *
+*****************************
+
+(For more on trace mode, see the example near the end of this file)
+
+Spy point: those let you enter trace mode when a particular predicate
+is called.
+
+    Adding a spy point for predicate pred with arity n 
+      (i.e., pred takes n arguments):
+        spy(pred/n).
+    Adding a spy point for predicate pred, tracing every
+    instance of the predicate, regardless of arity:
+        spy(pred).
+    Removing a spy point:
+        nospy(pred/n).
+        nospy(pred).
+
+Useful commands while in trace mode:
+    <enter>: move one step forward
+    l: leap causes the program to resume (i.e., to leave trace
+       mode) until the next spy point, or until the program is done.
+    s: skip the current subprogram:  the current subprogram is
+       executed with trace off, and the trace resumes when that
+       subprogram is done. Useful to quickly go through long
+       subprograms that you've already
+       debugged and you don't need to go through the details.
+    a: abort: exit the program and stop tracing.
+
+When you use these predicates (trace, spy), prolog enters debug
+mode. In this mode, prolog stops at spy points and trace points and
+disables some optimization so that debugging information is
+available. When in debug mode, the prompt will change to:
+
+[debug]  ?-
+
+You can also enter debug mode by typing:
+
+?- debug.
+
+To exit debug mode, type
+
+nodebug.
+
+Note that the behaviour of these commands may not be intuitively
+obvious when you work with them, so you should first get accustomed
+to them with simple programs.
+
+These are probably the commands you'll use most often in the debugger.
+For more commands, read the manual.
+
+
+Dealing with misbehaving code:
+    If your code gets into infinite recursion, you can hit Ctrl-C
+    to stop it.  The interpreter will ask you for an action. You can
+    return to the toplevel by typing "a".  "c" will continue the
+    program, while "t" will enter trace mode.  "?" will give you a
+    list of available options. Of note is "b" which will get you in
+    a break mode, which  starts another prolog toplevel. You can leave
+    the new toplevel by typing Ctrl-D.
+
+
+Example
+-------
+
+To practice with the above, type in the example presented in class:
+
+male(albert).
+male(bob).
+male(charlie).
+male(david).
+female(alice).
+parent(charlie, alice).
+parent(alice, albert).
+parent(david, albert).
+parent(charlie, david).
+grandfather(GP, GC) :- male(GP), parent(GP, X), parent(X, GC).
+
+And save it in a file called "parents.pl". Now start up prolog and try
+some things:
+
+
+?- [parents].
+% parents compiled 0.00 sec, 0 bytes
+true.
+
+?- male(Who).
+Who = albert ;
+Who = bob ;
+Who = charlie ;
+Who = david.
+
+?- parent(Who, albert).
+Who = alice ;
+Who = david ;
+false.
+
+?- parent(charlie, Who).
+Who = alice ;
+Who = david.
+
+?- grandfather(charlie, Who).
+Who = albert ;
+Who = albert.
+
+?- grandfather(david, Who).
+false.
+
+?- trace.
+Unknown message: query(yes)
+[trace]  ?- grandfather(charlie, Who).
+   Call: (7) grandfather(charlie, _G303) ? 
+   Call: (8) male(charlie) ? 
+   Exit: (8) male(charlie) ? 
+   Call: (8) parent(charlie, _L195) ? 
+   Exit: (8) parent(charlie, alice) ? 
+   Call: (8) parent(alice, _G303) ? 
+   Exit: (8) parent(alice, albert) ? 
+   Exit: (7) grandfather(charlie, albert) ? 
+Who = albert ;
+   Redo: (8) parent(charlie, _L195) ? 
+   Exit: (8) parent(charlie, david) ? 
+   Call: (8) parent(david, _G303) ? 
+   Exit: (8) parent(david, albert) ? 
+   Exit: (7) grandfather(charlie, albert) ? 
+Who = albert.
+
+[debug]  ?- 
+
+
+
+The output of trace consists of the following information:
+
+   Call: (7) grandfather(charlie, _G303) ? 
+   ^      ^  ^                          ^
+   |      |  |                          Appears after you press enter.
+   |      |  |                          It means that prolog will continue
+   |      |  |                          execution
+   |      |  The name of the current goal
+   |      Recursion depth. 
+   Port name
+
+The port tells you the state of the current goal. The port name can be
+one of four: Call, Redo, Exit, Fail. Call means that prolog is trying
+to evaluate the goal. Exit means that the goal has succeeded. Redo
+means that prolog is trying to find another solution. Fail means that
+there is no solution (or no other solution.)
+
+Note that in the above trace, we have pressed enter at each goal to
+get the default "creep" action. You can press "?" instead to get a
+list of available options.
+
+More
+----
+
+You can find another tutorial for SWI Prolog online at 
+ http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/1.html
+
+You can find the documentation for SWI Prolog at
+ http://www.swi-prolog.org/ 
+
+And click the link on the left column that reads "Documentation" or go
+directly to
+
+http://www.swi.psy.uva.nl/projects/SWI-Prolog/Manual/Contents.html

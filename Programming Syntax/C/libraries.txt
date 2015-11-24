@@ -1,0 +1,35 @@
+/**
+* Auther: 
+* Discription: 	some prototype-like-stuff for some rather usfull functions and such
+* 		it's mainly meant for a quick refreasher, NOT a replacment for wikipedia
+*		(although wikipedia was used to construct this :P )
+**/
+
+
+stdio.h
+	fopen
+	fclose
+	fread
+	fwrite
+
+	getchar	
+	printf
+	
+	EOF
+	NULL
+	stdin
+	stdout
+	stderr
+stdlib.h
+	atoi:	int atoi(const char *str)
+	rand:	int rand(void)
+	malloc:	void *malloc(size_t size)	//returns a pointer WHICH MUCT BE CAST to a block of memory
+	free:	void free(void *pointer)	//must only be called on a pointer returned by malloc ONCE
+	exit:	
+	abs:	int abs(int)
+string.h
+	strncat:char *strncat(char *dest, const char *src, size_t n)	//appends string src to string dest
+	strncmp:int strncmp(const char *, const char *, size_t n)	//compaires two strings
+	strncpy:char *strncpy(char *dest, const char *src, size_t n)	//copyes a string from src to dest
+	strlen:	size_t strlen(const char *)				//returns the length of a string
+	

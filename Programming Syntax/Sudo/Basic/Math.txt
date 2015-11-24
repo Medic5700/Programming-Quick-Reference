@@ -1,0 +1,10 @@
+list all math operators
+	addition/subtraction
+	multiplication/division
+	modulo
+	exponents/sqrt
+
+constants e,pi,
+division spicifics //on intiger division vs. real division
+//leave the functions like log and abs out
+how to access the math library

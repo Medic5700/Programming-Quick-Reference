@@ -1,0 +1,12 @@
+#lang scheme
+;Scheme uses numbers as exact as possible, and as long as nessiccary
+;IE: it can compute 1024! with exact precision for all 2000ish digits needed in the answer
+
+;some of the basic math operators
+(+ 5 5)
+(- 10 2)
+(* 25 5)
+(/ 10 3)
+(quotient 100 3)
+(modulo 100 51)
+(expt 2 10)

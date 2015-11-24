@@ -1,0 +1,9 @@
+some basic stuff about the general structer
+how to comment out code
+escape characters (or how to format them)
+representation of Null, True, False
+
+arg handleing from main!
+
+if it's a shell scripting language, show the traditional shell stuff
+	piping, redirection in/out, etc...

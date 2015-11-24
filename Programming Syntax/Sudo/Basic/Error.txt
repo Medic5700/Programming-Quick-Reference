@@ -1,0 +1,6 @@
+temp = 0
+try
+	temp = 2/0
+catch
+	print "Error X: attempt to divide by zero"
+//as many times as needed to show the various ways for try/catch, error handeling

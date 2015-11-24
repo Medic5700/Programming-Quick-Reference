@@ -1,0 +1,6 @@
+list out all the variables
+primitives
+arrays
+dictionaries
+hash tables
+etc...

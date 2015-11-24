@@ -1,0 +1,2 @@
+//C doesn't really handle errors in the usual try/catch blocks
+//it's up to the programmer to catch errors before they happen
