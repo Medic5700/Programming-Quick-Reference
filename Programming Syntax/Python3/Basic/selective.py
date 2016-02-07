@@ -9,7 +9,7 @@ or - or
 not - not
 '''
 
-for i in  range(10):
+for i in range(10):
     if i==0:
         print("if statment 0 option 0")
     elif i==1:

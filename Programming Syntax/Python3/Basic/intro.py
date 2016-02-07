@@ -1,7 +1,10 @@
 '''block comment'''
 #another comment
+"""A docstring""" #this should only be used in functions, but it's here to show what it is ahead of time
+import sys
+import getopt
 
-if __name__ == '__main__': #can be used to signify the main of a program
+if __name__ == '__main__': #used to signify the main of a program
     #indentation matters
     print("Hello World\n\n") # '\' is an escape character, all usual escape characters apply
 
@@ -12,12 +15,12 @@ if __name__ == '__main__': #can be used to signify the main of a program
     pass #a do nothing statment, litterally does nothing, but used so it doesn't break the parser
     
     #access the arguments the old way
-    import sys
+    #uses import sys
     print(sys.argv) #prints the list of args including running programs
     
     #a better way to handle command line options
     # http://docs.python.org/2/library/getopt.html
-    import getopt
+    #uses import getopt
     try:
         opts, args = getopt.getopt((sys.argv[1:]),'h')
         #second argument is for which arguments to look for, one's that require an argument after an option must go after a ':'
