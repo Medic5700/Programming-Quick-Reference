@@ -1,12 +1,15 @@
 '''
-< - less then
-<= - less then or equal
-> - greater then
-== - equal
-!= not equal
-and - and
-or - or
-not - not
+<    - less then
+<=   - less then or equal
+>    - greater then
+==   - equal
+!=   - not equal
+and  - and
+or   - or
+not  - not
+'''
+'''
+in   - used to see if something is 'in' another array/object
 '''
 
 for i in range(10):

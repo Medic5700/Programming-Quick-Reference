@@ -4,7 +4,7 @@
 import sys
 import getopt
 
-if __name__ == '__main__': #used to signify the main of a program
+if __name__ == '__main__': #used to signify the main of a program, good practice but not necissary
     #indentation matters
     print("Hello World\n\n") # '\' is an escape character, all usual escape characters apply
 
@@ -12,13 +12,14 @@ if __name__ == '__main__': #used to signify the main of a program
     print(True)
     print(False)
     print(None) #'None' is the equivilent of null
-    pass #a do nothing statment, litterally does nothing, but used so it doesn't break the parser
+    if (True):
+        pass #a do nothing statment, litterally does nothing, but used so it doesn't break the parser
     
     #access the arguments the old way
     #uses import sys
     print(sys.argv) #prints the list of args including running programs
     
-    #a better way to handle command line options
+    #another way to handle command line options
     # http://docs.python.org/2/library/getopt.html
     #uses import getopt
     try:
