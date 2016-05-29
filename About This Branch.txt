@@ -1,0 +1,1 @@
+This is meant as a learning guide for C#, written by Bryce Benn. Anything learned by Bryce on C# will be documented here
