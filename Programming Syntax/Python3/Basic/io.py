@@ -5,7 +5,19 @@ print("The ", end="") #can specify what print and the line with
 print("input is = " + test)
 
 #some stuff on files
-f1 = open("bin\\test.txt", "w", encoding="utf-8") #note: adding 'b' to the read mode make it read/write as binary
+f1 = open("bin\\test.txt", "w", encoding="utf-8")
+'''file modes:
+'r' = read (default)
+'w' = write
+'x' = exclusive file creation, fails if file exists
+'a' = append
+
+'b' = binary mode
+'t' = text mode (default)
+
+'+' = updating (reading and writing)
+'''
+
 f1.write("This is a test")
 f1.close()
 
