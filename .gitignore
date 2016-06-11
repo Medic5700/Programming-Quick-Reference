@@ -1,3 +1,7 @@
+# Other Stuff
+# ===================
+*.exe #exclude compiled executable programs
+
 # Python Stuff
 # ===================
 
