@@ -1,4 +1,3 @@
-//Hello World
 class HelloWorld
 {
     static void Main()
