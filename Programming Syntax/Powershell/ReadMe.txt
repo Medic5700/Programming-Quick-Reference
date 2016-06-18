@@ -4,6 +4,8 @@ Powershell is a scripting language
 Shares a lot of aliases with bash (in linux) and the cmd (in windows)
 pipping stuff through "Get-Member" command will be your new best friend when you get started
 
+Note:
+
 Compiling/running
 	Powershell by default restricts running powershell scripts. to set it to run local scrips, run
 		Set-Executionpolicy remotesigned

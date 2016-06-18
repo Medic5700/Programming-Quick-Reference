@@ -5,7 +5,7 @@ print("The ", end="") #can specify what print and the line with
 print("input is = " + test)
 
 #some stuff on files
-f1 = open("bin\\test.txt", "w", encoding="utf-8")
+f1 = open("test.log", "w", encoding="utf-8")
 '''file modes:
 'r' = read (default)
 'w' = write
@@ -21,7 +21,7 @@ f1 = open("bin\\test.txt", "w", encoding="utf-8")
 f1.write("This is a test")
 f1.close()
 
-f1 = open("bin\\test.txt", "r", encoding="utf-8")
+f1 = open("test.log", "r", encoding="utf-8")
 print("This is what's in the file:\"" + f1.read() + "\"") #noteL read() returns '' when EOF reached
 f1.close()
 #some usefull methods for files:
