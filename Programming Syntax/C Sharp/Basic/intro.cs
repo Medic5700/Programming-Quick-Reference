@@ -16,7 +16,7 @@ namespace intro //defineing a namespace not neccissary on smaller stuff
              * void - 
              * public -
              * private - 
-             * override - 
+             * override - Overrides method from class inheritance
              */
             //Program args can be passed to your program via and array of strings, does not include the name of the executable
             System.Console.WriteLine("Hello World"); //lines end with ';'
