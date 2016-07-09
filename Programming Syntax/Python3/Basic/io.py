@@ -19,6 +19,7 @@ f1 = open("test.log", "w", encoding="utf-8")
 '''
 
 f1.write("This is a test")
+f1.flush() #flushes stuff writen writen to file to the file
 f1.close()
 
 f1 = open("test.log", "r", encoding="utf-8")

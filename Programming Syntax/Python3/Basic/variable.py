@@ -1,4 +1,5 @@
 varInt = 5
+varInt = 0xA #Hex notation for a number
 varReal = 5.0
 varString = "Test"
 varBool = True
@@ -20,7 +21,6 @@ print(varList[0])
 print(varTuple[0])
 print(varDic['t'])
 #print(varSet[0]) #you can't access sets like this
-
 
 #multidimensional arrays aren't exactly standard in python, but can be made using an array of an array
 #Note: add-ons for python (numpy) allows support for large multidimensional arrays
@@ -78,4 +78,3 @@ print(list(dic1.keys()))
 print(sorted(dic1.keys()))
 for i,j in dic1.items(): #when looping over a dictionary, can use this to get both the key and data at the same time
     print("dic key '" + str(i) + "' contains data '" + str(j) + "'")
-    
