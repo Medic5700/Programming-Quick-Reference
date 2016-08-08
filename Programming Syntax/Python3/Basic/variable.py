@@ -78,3 +78,12 @@ print(list(dic1.keys()))
 print(sorted(dic1.keys()))
 for i,j in dic1.items(): #when looping over a dictionary, can use this to get both the key and data at the same time
     print("dic key '" + str(i) + "' contains data '" + str(j) + "'")
+    
+#some stuff on bytes
+import sys
+print((5).to_bytes(1,sys.byteorder)) #can convert an int to byte
+
+#some usefull casting stuff
+temp = int("5")
+temp = int("5A", 16) #convert hex string into int
+temp = list((1,2,3))

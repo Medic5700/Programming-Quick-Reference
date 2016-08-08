@@ -1,3 +1,7 @@
+'''
+# https://docs.python.org/3/tutorial/errors.html
+'''
+
 #basic try/except
 temp = 0
 try:
@@ -13,10 +17,12 @@ finally:
 
 try:
     temp = 2/0
-except NameError: #this allows the catching and handling of muletiple difference errors
+except NameError: #this allows the catching and handling of muletiple differet errors
     print("Error 1: NameError")
 except ZeroDivisionError:
     print("Error 1: ZeroDicisionError")
+except (IndexError, SyntaxError, ValueError): #you can handle multiple errors at the same time like this
+    print("Error 1: Multiple Errors") 
 except: #the all case, will catch any remaining error
     print("Error 1: SomeError")
 ''' (some common) built in exceptions, see link for full list
@@ -47,6 +53,13 @@ try:
 except:
     print("Error 3: Raised a ZeroDivisionError")
 
+#raising an error with information
+try:
+    raise ZeroDivisionError("Information for Error 4")
+except Exception as i:
+    print("Error 4: Raised a ZeroDivisionError with information")
+    print(i)
+
 #creating an error class and raising it
 class myError(Exception):
     def __init__(self, x, y):
@@ -57,5 +70,5 @@ class myError(Exception):
 try:
     raise myError(5,6)
 except myError as e:
-    print("Error 4: raised an error = " + str(e.x))
+    print("Error 5: raised an error = " + str(e.x))
     print(e)
