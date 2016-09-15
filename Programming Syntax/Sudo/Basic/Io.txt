@@ -1,4 +1,3 @@
 standerd input/standard output
-read from a file
-write to a file
-//may need a bin folder for the accossiated files...
+read from a log file
+write to a log file

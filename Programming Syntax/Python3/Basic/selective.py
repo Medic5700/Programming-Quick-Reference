@@ -36,3 +36,12 @@ if [1,2,3] == [1,2,3]:
     print("if statment 3 = true, container objects contian the same data")
 else:
     print("if statment 3 = false, the container objects do NOT contain the same data")
+
+#a one line if statment, usefull for list comprehensions
+print("if statment 4 = true") if (1 in [1,2,3]) else print("if statment 4 = false") #this is equivilent to the below
+'''
+if (1 in [1,2,3]):
+    print("if statment 4 = true") 
+else:
+    print("if statment 4 = false")
+'''

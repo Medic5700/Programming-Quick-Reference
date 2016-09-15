@@ -1,19 +1,19 @@
-import functools #allows for fancier manipulation of functions
-
 def func0(a,b,c):
     """This is a docstring, used to tell what a function/class/module does""" #it's good practice to use this
     global t1 #you must EXPLICITLY state global variables that can be used/modified
     print("Function 0: " + str(t1))
     return #this is valid, will return None (which is usually silently ignored)
     #functions don't need to have a return statment... but all functions return "None" if there is no return statment (which is usually silently ignored)
-
+    
 t1 = 10
 func0(1,2,3)
+
 
 def func1(a=10): #default values for arguments
     print("Function 1: " + str(a))
     
 func1()
+
 
 def func2(a,b=2,c=3,d=4):
     print("Function 2: a,b,c,d = " + str(a) + "," + str(b) + "," + str(c) + "," + str(d))
@@ -29,6 +29,7 @@ try: #these function calls don't work
 except:
     print("these fucntions fail")
 
+
 def func3(a, *b): #functions can accept variable numbers of arguments
     #the '*b' allows for multiple arguments to be specified
     output = str(a)
@@ -38,6 +39,7 @@ def func3(a, *b): #functions can accept variable numbers of arguments
 
 func3(1)
 func3(1,2,3,4,5,6,7,8,9,10)
+
 
 def func4(a,b,c,d):
     print("Function 4: a,b,c,d = " + str(a) + "," + str(b) + "," + str(c) + "," + str(d))
@@ -49,15 +51,19 @@ func4(*t2)
 t2 = {'a':1,'b':2,'c':3,'d':4}
 func4(**t2) #dictionaries use a '**' instead
 
+
 def func5(t1):
-    """Takes a number, returns a function"""
+    """Takes a number, returns a lambda function"""
     print("Function 5 creating Function 6")
     return lambda x:x+t1 #lambda functions created without a name on the fly
     
 func6 = func5(10) #here is a function being assigned to a variable
 print("Function 6 in use " + str(func6(20))) #and here it is being used
 
+
 #some stuff using partial functions
+import functools #allows for fancier manipulation of functions
+
 def funcSum(a,b,c,d):
     """sums a,b,c,d."""
     return a+b+c+d
