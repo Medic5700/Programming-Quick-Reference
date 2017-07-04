@@ -81,7 +81,11 @@ for i,j in dic1.items(): #when looping over a dictionary, can use this to get bo
     
 #some stuff on bytes
 import sys
-print((5).to_bytes(1,sys.byteorder)) #can convert an int to byte
+print((5).to_bytes(2,sys.byteorder)) #can convert an int to n many byte
+print(bytes([10])) #alternativly, you can use this, since 'bytes' is supposed to work on iterables
+print(bytes([10,20,30,40]))
+print(bytes(10)) #be carefull, this will actually make an array n bytes long instead of converting it
+print((bytes([2,4,6,8,10,12,14,16])).hex()) #convert byte array to hex string
 
 #some usefull casting stuff
 temp = int("5")
