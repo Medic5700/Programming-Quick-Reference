@@ -1,8 +1,11 @@
 don't use tabs
 functional programming
 
-compile/run:
-	run ghci for interpriter
-	use ":load filename" to load/interprite file
+run:
+	for interpriter use $ ghci
+	Prelude> :load filename -- to load/interprite file
+	Prelude> :reload -- to reload currently loaded file
+	Prelude> :quit
 
-	use ":reload" to reload currently loaded file
+compile:
+	$ ghc HelloWorld.hs		
