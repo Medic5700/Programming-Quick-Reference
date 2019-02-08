@@ -20,6 +20,7 @@ for i in range(10):
         print("if statment 0 option 1")
     else:
         print("if statment 0 option 2")
+print("=======================================================================")
 
 #some stuff with sets
 if 1 in [1,2,3,4,5]: #tests if an element is in a container object
@@ -36,6 +37,7 @@ if [1,2,3] == [1,2,3]:
     print("if statment 3 = true, container objects contian the same data")
 else:
     print("if statment 3 = false, the container objects do NOT contain the same data")
+print("=======================================================================")
 
 #a one line if statment, usefull for list comprehensions
 print("if statment 4 = true") if (1 in [1,2,3]) else print("if statment 4 = false") #this is equivilent to the below
@@ -45,3 +47,4 @@ if (1 in [1,2,3]):
 else:
     print("if statment 4 = false")
 '''
+print("=======================================================================")

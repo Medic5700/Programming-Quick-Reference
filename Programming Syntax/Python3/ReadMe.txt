@@ -5,4 +5,4 @@ indenting matters!
 
 to run from command line:
 	$> ptyhon program.py args
-	#if python isn't reqognized my the command line, locate the python exicutable, and add it to windows PATHS
+	#if python isn't reqognized by the command line, locate the python exicutable, and add it to windows PATHS
