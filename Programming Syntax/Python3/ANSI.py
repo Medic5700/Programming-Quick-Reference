@@ -2,6 +2,7 @@
 Prints using ANSI escape codes to colour apply colours and effects to text
 This was tested in the Ubuntu Terminal, other terminal support varies
 https://stackoverflow.com/questions/287871/how-to-print-colored-text-in-terminal-in-python
+http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
 '''
 
 for i in range(0,128):
@@ -15,3 +16,5 @@ print("")
 #you can also combine multiple codes together like the following
 print('combining multiple ANSI codes together')
 print('\33[4;5;31;47m Hello World \33[0m')
+
+#TODO some stuff on moving the curser around
