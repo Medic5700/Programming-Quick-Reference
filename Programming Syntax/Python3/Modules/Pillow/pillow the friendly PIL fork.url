@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=https://python-pillow.org/
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+IDList=
+URL=https://python-pillow.org/
+IconFile=https://python-pillow.org/images/pillow.ico
+IconIndex=1

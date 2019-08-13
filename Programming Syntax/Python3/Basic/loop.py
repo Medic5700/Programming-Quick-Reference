@@ -5,6 +5,7 @@ for i in range(0,10): #range is usfull for generating lists NOTE: range doesn't 
     print ("Loop 1 iteration " + str(i))
 for i in range(10,-1,-1): #making a list, and going in reverse
     print ("Loop 2 iteration " + str(i))
+print("=======================================================================")
 
 i = 0
 while (True):
@@ -12,11 +13,13 @@ while (True):
     i=i+1
     if i==10:
         break
+print("=======================================================================")
     
 for i in range(0,10):
     print ("Loop 4 iteration " + str(i))
 else: #else applies to loops to... will execute when no break has been executed
     print ("----------Loop 4 finished")
+print("=======================================================================")
     
 i=0
 while(i<10):
@@ -30,3 +33,4 @@ for i in range(0,10):
     if i<9:
         continue #continue will immediatly execute the next iteration of the loop
     print ("----------Loop 6 finished")
+print("=======================================================================")

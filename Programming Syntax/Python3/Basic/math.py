@@ -11,8 +11,12 @@
 '''
 
 ''' #bitwise operators
->> - 
-<< - 
+>> - shift bits right
+<< - shift bits left
+&  - bitwise and
+|  - bitwise or
+^  - bitwise xor
+~  - returns complement of x, is unary oporator IE: ~x
 '''
 
 print(pow(10,2))

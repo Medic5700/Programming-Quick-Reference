@@ -10,6 +10,9 @@ this is a test
 but I don't want this line to start a new line \ 
 so I escape the endline character''')
 
+print("Hello World", end="") #can specify what print ends the line with, in this case nothing
+print("=======================================================================")
+
 print("test" + "123") #string concatination
 print("test" "123") #this is also string concatination... but only works because these are two string litterals, and no variables
 
@@ -26,6 +29,7 @@ print(helloWorld[1:]) #this is valid, will print from [1] to end of string
 print(helloWorld[-2:]) #this is valid, will print from second last character to end of string
 
 #helloWorld[5] = "2" #this won't work, as these string are immutable
+print("=======================================================================")
 
 #some usefull string methods
 # https://docs.python.org/3/library/stdtypes.html#string-methods
@@ -35,6 +39,7 @@ print("Hello World".index("World")) # str.index(sub[, start[, end]]) Like find()
 print("Hello World".rindex("World")) # str.rindex(sub[, start[, end]]) Like rfind() but raises ValueError when the substring sub is not found.
 print("Hello World".split(" ")) # str.split(sep=None, maxsplit=-1)
 print("Hello World".strip("HeWld")) #Return a copy of the string with the leading and trailing characters removed. The chars argument is a string specifying the set of characters to be removed. If omitted or None, the chars argument defaults to removing whitespace.
+print("=======================================================================")
 
 #string formating
 print("A number: " + str(1/7))
@@ -50,3 +55,7 @@ print("Some Numbers: {t1} {t2} {t3}".format(t1=1, t2=2, t3=3)) #keyword argument
 print("An Array: {0!s}".format([1,2,3])) #'!s' or '!a' allows casting the variable with str() or ascii(), respectivly
 print("A Number: {0:.4f}".format(100/7)) #adding ':' allows for further formating, in this case, rounding to 4 placed after the decimal
 print("A Well Spaced Table: {0:8}{1:8.3f}{2:8d}".format(25,25/7,125)) #numbers after the ':' can specify minimum column width
+print("=======================================================================")
+
+#unicode
+#TODO some unicode stuff

@@ -14,6 +14,7 @@ else: #'else' is optional
 finally: 
     #will always execute after everything, if any exceptions are raised, 'finally' will run, and the exception will be re-raised
     print("Error 0 => temp = " + str(temp))
+print("=======================================================================")
 
 try:
     temp = 2/0
@@ -40,6 +41,7 @@ OS Errors
  exception FileNotFoundError - Raised when a file or directory is requested but doesn’t exist
  exception PermissionError - Raised when trying to run an operation without the adequate access rights 
 '''
+print("=======================================================================")
 
 #this one allows you to see what error information is given
 try:
@@ -59,6 +61,7 @@ try:
 except Exception as i:
     print("Error 4: Raised a ZeroDivisionError with information")
     print(i)
+print("=======================================================================")
 
 #creating an error class and raising it
 class myError(Exception):
@@ -72,3 +75,4 @@ try:
 except myError as e:
     print("Error 5: raised an error = " + str(e.x))
     print(e)
+print("=======================================================================")

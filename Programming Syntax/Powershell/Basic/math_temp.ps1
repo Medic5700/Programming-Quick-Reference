@@ -19,5 +19,6 @@
 [Math]::Pow(123, 2)
 [Math]::Sqrt(100)
 [Math]::Sin( [Math]::PI / 2 )
+[Math]::Round(10.5)
 
 #for really big numbers... cast using [BigInt] and enclose the number as a string //temp

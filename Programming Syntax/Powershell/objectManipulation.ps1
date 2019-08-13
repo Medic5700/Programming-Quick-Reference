@@ -13,5 +13,7 @@ $data | select Mode, Name, @{N="LengthKB";E={($_.length)/1024}}
 
 echo "create an object========================================================="
 $temp = New-Object System.Object
-$temp | Add-Member -type NoteProperty -name AttributeName -value ("some value")
+$temp | Add-Member -type NoteProperty -name AttributeName -value ("some value") #the verbose way
+$temp | Add-Member NoteProperty "Second Attribute" 5
 echo $temp
+
