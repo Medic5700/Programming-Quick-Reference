@@ -1,2 +1,0 @@
-Just a screen shot of the output
-(for sudo, the full text output is saved instead)
