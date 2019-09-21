@@ -12,10 +12,10 @@
 
 for i : 0 .. 10
     if i = 0 then
-	put "if statment 0 option 0"
+	put "if statement 0 option 0"
     elsif i = 2 then
-	put "if statment 0 option 1"
+	put "if statement 0 option 1"
     else
-	put "if statment 0 option 2"
+	put "if statement 0 option 2"
     end if
 end for

@@ -14,13 +14,13 @@ public class selective {
      **/
     for(int i=0; i<10;i++){
       if (i == 0){
-        System.out.println("if statment 0 option 0");
+        System.out.println("if statement 0 option 0");
       }
       else if (i == 1){
-        System.out.println("if statment 0 option 1");
+        System.out.println("if statement 0 option 1");
       }
       else{
-        System.out.println("if statment 0 option 2");
+        System.out.println("if statement 0 option 2");
       }
     }
     
@@ -30,11 +30,11 @@ public class selective {
     
     for(int i=0; i<10;i++){ //switch
       switch(i){
-        case 0: System.out.println("if statment 2 option 0"); break;
-        case 1: System.out.println("if statment 2 option 1"); break;
-        case 2: System.out.println("if statment 2 option 2"); //notice, without break, case 2 exicutes case 3 and default as well
-        case 3: System.out.println("if statment 2 option 3");
-        default:System.out.println("if statment 2 option 4");
+        case 0: System.out.println("if statement 2 option 0"); break;
+        case 1: System.out.println("if statement 2 option 1"); break;
+        case 2: System.out.println("if statement 2 option 2"); //notice, without break, case 2 exicutes case 3 and default as well
+        case 3: System.out.println("if statement 2 option 3");
+        default:System.out.println("if statement 2 option 4");
       }
     }
   }

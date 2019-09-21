@@ -3,8 +3,8 @@ A simple for loop with every selective structer in it. The loop should iterate t
 ex:
 for i in  range(10):
     if i==0:
-        print("if statment 0 option 0")
+        print("if statement 0 option 0")
     elif i==1:
-        print("if statment 0 option 1")
+        print("if statement 0 option 1")
     else:
-        print("if statment 0 option 2")
+        print("if statement 0 option 2")

@@ -14,13 +14,13 @@
 
 	for ($i=0;$i<10;$i++){
 		if ($i==0){
-			echo "if statment 0 option 0<br>";
+			echo "if statement 0 option 0<br>";
 		}
 		elseif ($i==1){
-			echo "if statment 0 option 1<br>";
+			echo "if statement 0 option 1<br>";
 		}
 		else {
-			echo "if statment 0 option 2<br>";
+			echo "if statement 0 option 2<br>";
 		}
 	}
 

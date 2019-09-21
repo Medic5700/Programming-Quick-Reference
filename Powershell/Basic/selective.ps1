@@ -21,21 +21,21 @@
 
 for ($i = 0;$i -lt 10; $i++){
     if ($i -eq 0){
-        echo "if statment 0 option 0"
+        echo "if statement 0 option 0"
     }
     elseif ($i -eq 1){
-        echo "if statment 0 option 1"
+        echo "if statement 0 option 1"
     }
     else{
-        echo "if statment 0 option 2"
+        echo "if statement 0 option 2"
     }
 }
 
 for ($i = 0; $i -lt 4; $i++){
     switch ($i){
-        (2-2) {echo "if statment 1 option 0"}
-        1 {echo "if statment 1 option 1"}
-        default {echo "if statment 1 option 2"}
+        (2-2) {echo "if statement 1 option 0"}
+        1 {echo "if statement 1 option 1"}
+        default {echo "if statement 1 option 2"}
     }
 }
 
