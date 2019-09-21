@@ -3,6 +3,10 @@
 *.exe 
 *.obj
 
+# Java Stuff
+# ===================
+*.class
+
 # Python Stuff
 # ===================
 

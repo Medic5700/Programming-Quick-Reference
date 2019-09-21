@@ -1,16 +1,16 @@
 #lang scheme
 
-; = - equal
-; < - less then
-; <= - less then or equal to
-; > - greater then
-; >= - greater then or equal to
-; eq? - identical
-; eqv? - operationally equivalent
+; =      - equal
+; <      - less then
+; <=     - less then or equal to
+; >      - greater then
+; >=     - greater then or equal to
+; eq?    - identical
+; eqv?   - operationally equivalent
 ; equal? - same structure and contents
-; not - not
-; and - and
-; or - or
+; not    - not
+; and    - and
+; or     - or
 
 ; empty? - is the list/arg empty?
 
