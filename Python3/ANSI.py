@@ -7,18 +7,6 @@ https://tintin.sourceforge.io/info/ansicolor/
 '''
 #note: can use "\33[{xyz}m" or "\u001b[{xyz}m" since it's 'ESC' in ASCII, represented in Octal or Hexadecimal respectivly
 
-'''
-Makes ANSI escape character sequences (for producing colored terminal text and cursor positioning) work under MS Windows.
-Note: limited functionality (IE: the basic stuff is supported, but not 24-bit colour, etc)
-Note: ASNI escape characters will be passed through on Ubuntu Terminal
-'''
-try:
-	from colorama import init #pip install colorama
-	init()
-	print("colorama is installed")
-except:
-	print("colorama not installed")
-
 for i in range(0,128):
 	code = '\33[' + str(i) + 'm' #this is the ANSI escape code
 	text = '\\33[' + str(i) + 'm'
