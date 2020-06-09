@@ -23,7 +23,12 @@ Getting started:
 		SAVE"HELLOWORLD.BAS	#will save a tokonized version of the BASIC program (not plain ascii)
 
 		#can alternativly use Ctrl+V to paste a basic program into the emulator
-	#Other BASIC
+
+Reference:
+	https://www.c64-wiki.com/wiki/Category:BASIC-Command
+
+
+	#Other BASIC interpriters
 	YaBasic:
 		$ sudo apt install yabasic #a BASIC interpriter
 	Commodore 64 Emulator (VICE):

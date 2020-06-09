@@ -123,7 +123,8 @@ Clear Screen: \u001b[{n}J clears the screen ◦n=0 clears from cursor until end 
 n=1 clears from cursor to beginning of screen
 n=2 clears entire screen
 
-Clear Line: \u001b[{n}K clears the current line ◦n=0 clears from cursor to end of line
+Clear Line: \u001b[{n}K clears the current line
+n=0 clears from cursor to end of line
 n=1 clears from cursor to start of line
 n=2 clears entire line
 
