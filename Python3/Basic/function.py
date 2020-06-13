@@ -77,3 +77,59 @@ for i in [0,1,2,3]:
 print("partial functions: " + str(partialFunction(1,2,3,4)))
 print(funcSum.__doc__) #a functions docstring can be accessed with this
 print("=======================================================================")
+
+#some stuff on generators
+#https://realpython.com/introduction-to-python-generators/
+def generator1():
+    """produces the fibonacci sequence"""
+    a = 0
+    yield a #yield is life return, only instead of exiting the function, it pauses the function at the line, and reterns there when called
+    b = 1
+    yield b
+    while True:
+        c = a + b
+        yield c
+        a = b
+        b = c
+        
+gen1 = generator1()
+for i in range(0,10):
+    print("Generator1: " + str(next(gen1))) #next calls the generator to run until the next yeild
+print("=======================================================================")
+    
+def generator2():
+    """counts by 8 until 100"""
+    i = 0
+    while True:
+        yield i
+        i += 8
+        if i > 100: 
+            break
+    #notice that when the generator ends without calling yeild (by breaking out the loop in this case), the generator stops interating
+    #the generator will return the "StopIteration" exception in this case, and is what the for loop looks for to stop iterating
+
+for i in generator2(): #another way to call/use a generator
+    print("Generator2: " + str(i))
+print("=======================================================================")
+        
+def generator3():
+    """Takes in a number, and returns the rolling sum"""
+    t = 0
+    while True:
+        i = (yield t) #here, yield can also take in a value
+        if i != None:
+            t += i
+
+gen3 = generator3()
+next(gen3) #sends a None to the generator to get it started?
+for i in range(0,11):
+    print("Gnerator3: " + str(gen3.send(i))) #gen3.send() sends a value to the generator
+gen3.close() #closes the generator
+print("=======================================================================")
+
+#this is just like a list comprehension, only it's a generator and thus take less memory
+#note: generators take less memory, but are slower then list comprehensions
+generater4 = (i**2 for i in range(10)) 
+for i in generater4:
+    print("Generator4: " + str(i))
+print("=======================================================================")
