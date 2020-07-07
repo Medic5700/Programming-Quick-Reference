@@ -1,33 +1,58 @@
 #basic variable types and respective casting
 varInt = int(5)
+varInt = int('5a', 16) #converts hex string into a number
 varInt = 0xA #Hex notation for a number
+
 varReal = float(5.0)
-varString = str("Test")
+
+varString = str("Test") #note: strings are not mutable
+varChr = chr(65) #char doesn't exist in python, they are just a standard string of len 1
+
 varBool = bool(True)
-#char doesn't exist in python, they are just a standard string of len 1
-#TPDP add in some unicode stuff
+
+varBytes = b"test" #this creates a byte array, note: byte arrays are not mutable
+varBytes = bytes(5) #this will actually create a byte array 5 bytes long all initalized to zero
+varBytes = bytes('test', 'utf-8') #this will cast a string to a byte array with a specific encoding
+
 
 varList = [] #an empty list
 varList = [1,2,3,4,5] #arrays are zero indexed
 varList = [(i) for i in range(8)] #a way to generate and initialize an array (see list comprehensions https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions )
 varList = list([1,2,3,4])
+print(varList[0])
 
 varTuple = (1,2,3) #tuples are like an array, elements in a tuple are nonmutable, but they can contain elements that are mutable (lists)
 varTuple = 1,2,3 #another way to initialize a tuple
 varTuple = (1) #for the single element case, this doesn't work to create a tuple
 varTuple = (1,) #following the element with a comma does create a single element tuple
 varTuple = tuple((1,))
+print(varTuple[0])
 
 varDic = {} #an empty dictionary
 varDic = {1:'s',3:'4','t':'a'} #a dictionary
+varDic = {i : chr(65 + i) for i in range(10)} #list comprehensions also work with dictionaries
 varDic = dict({1:'s',3:'4','t':'a'})
-
-print(varList[0])
-print(varTuple[0])
 print(varDic['t'])
+
+#TODO add in some unicode stuff
 print("=======================================================================")
 
+'''
+#TODO
+Random stuff that needs organizing
+'''
 varInt, varReal = 6, 6.0 #python supports multivariable assignments
+print("=======================================================================")
+
+#Variable Annotations https://www.python.org/dev/peps/pep-0526/
+#variable typing, python allows typing hints that IDEs and type-checkers can enforce, BUT it is not enforced at runtime
+varInt : int = 5
+varInt = 'notInt' #IDEs and type-checkers can enforce typing and throw an error, but this line will not throw an error during runtime
+varStr : str #can work for uninitialized variables
+varList : list = [1,2,3,4]
+#for more advanced annotating, requires importing some modules
+from typing import List
+varList : List[int] = [1,2,3,4]
 print("=======================================================================")
 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
@@ -111,6 +136,3 @@ print(bytes([10,20,30,40]))
 print(bytes(10)) #be carefull, this will actually make an array n bytes long instead of converting it
 print((bytes([2,4,6,8,10,12,14,16])).hex()) #convert byte array to hex string
 print("=======================================================================")
-
-#some usefull casting stuff
-temp = int("5A", 16) #convert hex string into int

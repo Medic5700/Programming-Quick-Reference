@@ -38,7 +38,7 @@ https://docs.python.org/3/library/exceptions.html#bltin-exceptions
  exception ValueError - Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value
 OS Errors
  exception FileExistsError - Raised when trying to create a file or directory which already exists
- exception FileNotFoundError - Raised when a file or directory is requested but doesn’t exist
+ exception FileNotFoundError - Raised when a file or directory is requested but doesnâ€™t exist
  exception PermissionError - Raised when trying to run an operation without the adequate access rights 
 '''
 print("=======================================================================")

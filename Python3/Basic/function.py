@@ -2,11 +2,13 @@ def func0(a,b,c):
     """This is a docstring, used to tell what a function/class/module does""" #it's good practice to use this
     #it is good practice for a docstring to be in the format of 'input reults in output' IE:"""Do X and return a list."""
     #can be multi-lined, first line should be a one liner discription (IE:"""Do X and return a list"""), then an empty line, then as much detail as needed
+    #the docstring will be used by python's help function to list what it does when queried
     
     global t1 #you must EXPLICITLY state global variables that can be used/modified
+    t2 : int  = 5#by annoatating a varable like this, the interpriter is explicidly creating a local variable in the function memory scope
     print("Function 0: " + str(t1))
     return #this is valid, will return None (which is usually silently ignored)
-    #functions don't need to have a return statment... but all functions return "None" if there is no return statment (which is usually silently ignored)
+    #functions don't need to have a return statment, but all functions return "None" if there is no return statment (which is usually silently ignored)
     
 t1 = 10
 func0(1,2,3)
@@ -44,6 +46,7 @@ func3(1)
 func3(1,2,3,4,5,6,7,8,9,10)
 print("=======================================================================")
 
+# https://www.python.org/dev/peps/pep-0448/
 def func4(a,b,c,d):
     print("Function 4: a,b,c,d = " + str(a) + "," + str(b) + "," + str(c) + "," + str(d))
 
@@ -53,6 +56,7 @@ t2 = [1,2,3,4]
 func4(*t2)
 t2 = {'a':1,'b':2,'c':3,'d':4}
 func4(**t2) #dictionaries use a '**' instead
+#this kind of unpacking only works for function definitions and function calls
 print("=======================================================================")
 
 def func5(t1):

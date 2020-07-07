@@ -7,10 +7,14 @@ class InstanceClass:
         pass
     
     def __repr__(self):
+        """This should return a valid python expression to remake this object"""
         # https://docs.python.org/3/reference/datamodel.html#object.__repr__
         pass
     
     def __str__(self):
+        """This returns a nicly formated string that represents the object, but doesn't have to be a valid python expression
+
+        This function is called by built-in print() to print the object"""
         # https://docs.python.org/3/reference/datamodel.html#object.__str__
         pass
 
@@ -22,4 +26,5 @@ class StaticClass:
     def function2():
         pass
 
-#inheritance
+#TODO inheritance
+#TODO metaclasses
