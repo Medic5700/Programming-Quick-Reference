@@ -35,9 +35,9 @@ print("=======================================================================")
 
 def func3(a, *b): #functions can accept variable numbers of arguments
     #the '*b' allows for multiple arguments to be specified
-    output = str(a)
+    output = str(a) + ","
     for i in b:
-        output = output + "," + str(i)
+        output += output + "," + str(i)
     print("Function 3: arguments are = " + output)
 
 func3(1)
@@ -127,7 +127,7 @@ for i in range(0,11):
 gen3.close() #closes the generator
 print("=======================================================================")
 
-#this is just like a list comprehension, only it's a generator and thus take less memory
+#this is just like a list comprehension, only it's a generator and thus takes less memory
 #note: generators take less memory, but are slower then list comprehensions
 generater4 = (i**2 for i in range(10)) 
 for i in generater4:

@@ -1,24 +1,33 @@
-varInt = 5
+#basic variable types and respective casting
+varInt = int(5)
 varInt = 0xA #Hex notation for a number
-varReal = 5.0
-varString = "Test"
-varBool = True
+varReal = float(5.0)
+varString = str("Test")
+varBool = bool(True)
 #char doesn't exist in python, they are just a standard string of len 1
 #TPDP add in some unicode stuff
 
-varInt,varReal = 6,6.0 #python supports multivariable assignments
-
+varList = [] #an empty list
 varList = [1,2,3,4,5] #arrays are zero indexed
 varList = [(i) for i in range(8)] #a way to generate and initialize an array (see list comprehensions https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions )
+varList = list([1,2,3,4])
+
 varTuple = (1,2,3) #tuples are like an array, elements in a tuple are nonmutable, but they can contain elements that are mutable (lists)
 varTuple = 1,2,3 #another way to initialize a tuple
 varTuple = (1) #for the single element case, this doesn't work to create a tuple
 varTuple = (1,) #following the element with a comma does create a single element tuple
+varTuple = tuple((1,))
+
 varDic = {} #an empty dictionary
 varDic = {1:'s',3:'4','t':'a'} #a dictionary
+varDic = dict({1:'s',3:'4','t':'a'})
+
 print(varList[0])
 print(varTuple[0])
 print(varDic['t'])
+print("=======================================================================")
+
+varInt, varReal = 6, 6.0 #python supports multivariable assignments
 print("=======================================================================")
 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
@@ -104,6 +113,4 @@ print((bytes([2,4,6,8,10,12,14,16])).hex()) #convert byte array to hex string
 print("=======================================================================")
 
 #some usefull casting stuff
-temp = int("5")
 temp = int("5A", 16) #convert hex string into int
-temp = list((1,2,3))

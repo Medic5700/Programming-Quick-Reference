@@ -1,16 +1,18 @@
-'''
+'''Boolean operators
 <    - less then
 <=   - less then or equal
 >    - greater then
+>=   - greater then or equal
 ==   - equal
 !=   - not equal
 and  - and
 or   - or
 not  - not
-'''
-'''
-in   - used to see if something is 'in' another array/object
-is   - used to see if something is the same as another object
+
+in       - used to see if something is 'in' another array/object
+not in   - 
+is       - used to see if something is the same as another object
+is not   - 
 '''
 
 for i in range(10):
@@ -46,5 +48,9 @@ if (1 in [1,2,3]):
     print("if statement 4 = true") 
 else:
     print("if statement 4 = false")
+'''
+#the 'if' AND 'else' are required for this to work, the below statement will not work and throw a parsing error
+'''
+print("if statement 4 = true") if (1 in [1,2,3])
 '''
 print("=======================================================================")

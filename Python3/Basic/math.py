@@ -1,13 +1,13 @@
 # http://www.tutorialspoint.com/python/python_numbers.htm
 # https://docs.python.org/3/tutorial/introduction.html#numbers
 ''' #basic Math
-+ - addition
-- - subtraction
-* - multiplication
-/ - division
-// - floor division
-% - modulus
-** - powers
++   - addition
+-   - subtraction
+*   - multiplication
+/   - division
+//  - floor division
+%   - modulus
+**  - exponent
 '''
 
 print(pow(10,2))                #output 100
@@ -16,12 +16,12 @@ print(max(10,2))                #output 10
 print(round(10.123456789,2))    #output 10.15
 
 ''' #bitwise operators
->> - shift bits right
-<< - shift bits left
-&  - bitwise and
-|  - bitwise or
-^  - bitwise xor
-~  - returns complement of x, is unary oporator IE: ~x
+>>  - shift bits right
+<<  - shift bits left
+&   - bitwise and
+|   - bitwise or
+^   - bitwise xor
+~   - returns complement of x, is unary oporator IE: ~x
 '''
 
 print(0b1111)   #output 15
@@ -43,4 +43,8 @@ print(math.sqrt(4))         #output 2.0
 
 '''
 Python3 also has support for Decimal, Fraction, and Complex Numbers
+'''
+
+'''
+@   - used for matrix multiplication, but no default python objects support it (but the numpy module does)
 '''

@@ -35,3 +35,7 @@ if __name__ == '__main__': #used to signify the main of a program, good practice
             print("some help text")
     print(opts)
     print(args)
+
+    #some keyword stuff
+    assert 2 == 2 #asserts a logic statement, and throws an error if false. C
+    #an be used during development to check that variables are holding expected values. Some runtime optimizations allow the ignoring of assertions while interpriting.
