@@ -26,7 +26,7 @@ do {
 } until ($i -eq 10)
 
 $i = 0
-while (1){
+while ($true){
     echo "Loop 5 interation $i"
     $i++
     if ($i -eq 10){
