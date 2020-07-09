@@ -1,4 +1,4 @@
-def factorial2(t1):
+def factorial2(t1 : int) -> int:
 	a = 1
 	for i in range(1,t1 + 1):
 		a = a * i

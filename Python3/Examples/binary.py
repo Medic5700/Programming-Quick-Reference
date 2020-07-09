@@ -1,4 +1,4 @@
-def binary(t0):
+def binary(t0 : int) -> str:
     t1 = ""
     for i in range(0,32):
         if t0%2 == 0:
@@ -8,7 +8,7 @@ def binary(t0):
         t0 = t0//2.0
     return t1
 
-def number(t0):
+def number(t0 : str) -> int:
     t1 = 0
     for i in range(0,32):
         t1 = t1*2

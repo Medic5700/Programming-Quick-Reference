@@ -1,4 +1,4 @@
-def factorial (t1):
+def factorial (t1 : int) -> int:
     if (t1 > 1):
         return t1 * factorial (t1-1)
     else:

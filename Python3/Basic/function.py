@@ -1,4 +1,4 @@
-def func0(a,b,c):
+def func0(a : int, b : int, c : int) -> None: #function decliration, with full annotations
     """This is a docstring, used to tell what a function/class/module does""" #it's good practice to use this
     #it is good practice for a docstring to be in the format of 'input reults in output' IE:"""Do X and return a list."""
     #can be multi-lined, first line should be a one liner discription (IE:"""Do X and return a list"""), then an empty line, then as much detail as needed

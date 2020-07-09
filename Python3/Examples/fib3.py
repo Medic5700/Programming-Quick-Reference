@@ -1,4 +1,4 @@
-def fib3():
+def fib3() -> int:
     a = 0
     yield a
     b = 1

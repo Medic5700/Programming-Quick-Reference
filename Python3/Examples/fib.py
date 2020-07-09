@@ -1,4 +1,4 @@
-def fib (t1):
+def fib (t1 : int) -> int:
     if (t1==0):
         return 0
     elif (t1==1):
