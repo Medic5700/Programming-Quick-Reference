@@ -1,8 +1,8 @@
 #primitives
-$var_int = 10
-$var_real = 20.5
-$var_string = "string"
-$var_bool = $false # $true
+$var_int = [int] 10
+$var_float = [float] 20.5
+$var_string = [string] "string"
+$var_bool = [bool] $false # $true
 
 $temp = [string]$var_int #casting
 
@@ -15,7 +15,7 @@ for ($i=0; $i -lt 6; $i++){
 
 
 # http://technet.microsoft.com/en-us/library/ee692803.aspx
-$var_hashtable = @{"a" = 1;"b" = 2} #creat a hash table
+$var_hashtable = @{"a" = 1;"b" = 2} #create a hash table
 $var_hashtable.Add("c",3) #add entry
 $var_hashtable.remove("a")
 #accessing a hash table
