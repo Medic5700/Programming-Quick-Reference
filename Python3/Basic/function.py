@@ -14,6 +14,14 @@ t1 = 10
 func0(1,2,3)
 print("=======================================================================")
 
+#random odds and ends #TODO
+#function attributes
+def funcX(a):
+    print(a)
+funcX.test = 5
+
+print("=======================================================================")
+
 def func1(a=10): #default values for arguments
     print("Function 1: " + str(a))
     

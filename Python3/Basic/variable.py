@@ -50,6 +50,7 @@ varInt : int = 5
 varInt = 'notInt' #IDEs and type-checkers can enforce typing and throw an error, but this line will not throw an error during runtime
 varStr : str #can work for uninitialized variables
 varList : list = [1,2,3,4]
+varDic : dict = {}
 varDic : 'random' = {} #can also use strings for annotations
 #for more advanced annotating, requires importing some modules
 from typing import List

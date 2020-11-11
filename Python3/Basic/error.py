@@ -8,11 +8,11 @@ try:
     temp = 2/0
 except: #this will execute when ANY error comes up in the above try statment
     print("Error 0: attempt to divide by zero")
-else: #'else' is optional
+else: #optional
     #will execute iff no exceptions are raised in the try clause
     temp = 2
-finally: 
-    #will always execute after everything, if any exceptions are raised, 'finally' will run, and the exception will be re-raised
+finally: #optional
+    #will always execute after everything even if any exceptions are raised, 'finally' will run, and the exception will be re-raised
     print("Error 0 => temp = " + str(temp))
 print("=======================================================================")
 
