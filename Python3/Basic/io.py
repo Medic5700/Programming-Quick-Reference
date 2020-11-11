@@ -4,6 +4,17 @@ test = input("input test:") #some input
 print("The ", end="") #can specify what print ends the line with, in this case nothing
 print("input is = " + test)
 
+print("=======================================================================")
+
+#repr is like casting with str, but returns a human readable string in cases with special characters
+
+print("printing with str:  " + str("test \t\t test"))
+print("printing with repr: " + repr("test \t\t test"))
+
+#in essance, repr returns the string you would need to enter into a python terminal to recreate said string/object
+
+print("=======================================================================")
+
 #some stuff on files
 f1 = open("test.log", "w", encoding="utf-8")
 '''file modes:
