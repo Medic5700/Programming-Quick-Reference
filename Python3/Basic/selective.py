@@ -53,4 +53,13 @@ else:
 '''
 print("if statement 4 = true") if (1 in [1,2,3])
 '''
+
+#for variable assignment
+temp = "if statement 5 = true" if False else "if statement 5 = false"
+#the below will not work
+'''
+temp = "if statement 5 = true" if False else temp = "if statement 5 = false"
+'''
+print(temp)
+
 print("=======================================================================")
