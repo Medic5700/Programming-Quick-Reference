@@ -14,6 +14,8 @@ if __name__ == '__main__': #used to signify the main of a program, good practice
     print(None) #'None' is the equivilent of null
     if (True):
         pass #a do nothing statment, litterally does nothing, but used so it doesn't break the parser
+
+    #===========================================================================
     
     #access the arguments the old way
     #uses import sys
@@ -36,6 +38,21 @@ if __name__ == '__main__': #used to signify the main of a program, good practice
     print(opts)
     print(args)
 
+    #===========================================================================
+
     #some keyword stuff
     assert 2 == 2 #asserts a logic statement, and throws an error if false. C
     #an be used during development to check that variables are holding expected values. Some runtime optimizations allow the ignoring of assertions while interpriting.
+
+    #===========================================================================
+
+    #you can implicidly not end a line using brackets, commas, etc
+    print(
+        "Implicid",
+        "not end line"
+        )
+
+    #you can explicidly not end a line using the '\' at the end of a line
+    print("Explicid" \
+          + " not end line" \
+          )
