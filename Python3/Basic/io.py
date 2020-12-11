@@ -6,12 +6,9 @@ print("input is = " + test)
 
 print("=======================================================================")
 
-#repr is like casting with str, but returns a human readable string in cases with special characters
-
-print("printing with str:  " + str("test \t\t test"))
-print("printing with repr: " + repr("test \t\t test"))
-
-#in essance, repr returns the string you would need to enter into a python terminal to recreate said string/object
+print("printing with str:   " + str("test \t\t test \u25a0"))
+print("printing with repr:  " + repr("test \t\t test \u25a0")) #repr is like casting with str, but returns a human readable string in cases with standard escape characters
+print("printing with ascii: " + ascii("test \t\t test \u25a0")) #ascii returns a string, but also converts all characters (think unicod) into a human readable string
 
 print("=======================================================================")
 

@@ -9,6 +9,9 @@ and  - and
 or   - or
 not  - not
 
+all(list)- applies AND to a list of booleans, returns a single boolean
+any(list)- applies OR to a list of booleans, returns a single boolean
+
 in       - used to see if something is 'in' another array/object
 not in   - 
 is       - used to see if something is the same as another object
@@ -49,17 +52,24 @@ if (1 in [1,2,3]):
 else:
     print("if statement 4 = false")
 '''
-#the 'if' AND 'else' are required for this to work, the below statement will not work and throw a parsing error
-'''
+
+''' #the 'if' AND 'else' are required for this to work, the below statement will not work and throw a parsing error
 print("if statement 4 = true") if (1 in [1,2,3])
 '''
 
 #for variable assignment
 temp = "if statement 5 = true" if False else "if statement 5 = false"
-#the below will not work
-'''
+''' #the below will not work
 temp = "if statement 5 = true" if False else temp = "if statement 5 = false"
 '''
 print(temp)
 
 print("=======================================================================")
+
+temp = [True, True, False, True]
+if all(temp) == True:
+    print("if statement 6A = true")
+if any(temp) == True:
+    print("if statement 6B = true")
+else:
+    print("if statement 6 = false")
