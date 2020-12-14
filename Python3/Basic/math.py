@@ -4,6 +4,7 @@
 +   - addition
 -   - subtraction
 *   - multiplication
+@   - matrix multiplication (currently not implimented)
 /   - division
 //  - floor division
 %   - modulus

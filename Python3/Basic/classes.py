@@ -18,6 +18,38 @@ class InstanceClass:
         # https://docs.python.org/3/reference/datamodel.html#object.__str__
         pass
 
+    def __del__(self):
+        """This is a deconstructor called when this object is going to be deleted
+        
+        This function is called by built-in del"""
+        # https://docs.python.org/3/reference/datamodel.html#object.__del__
+
+    # Other "Dunder (Magic) Methods" =======================================================================
+
+    #comparison stuff https://docs.python.org/3/reference/datamodel.html#object.__lt__
+    def __lt__(self, other):
+        pass
+    def __le__(self, other):
+        pass
+    def __eq__(self, other):
+        pass
+    def __ne__(self, other):
+        pass
+    def __gt__(self, other):
+        pass
+    def __ge__(self, other):
+        pass
+
+    #container type stuff https://docs.python.org/3/reference/datamodel.html#emulating-container-types
+    def __len__(self):
+        pass
+    def __getitem__(self, key): 
+        #x = self[key]
+        pass
+    def __setitem__(self, key, value):
+        #self[key] = x
+        pass
+
 class StaticClass:
     """This class will not be instatiated, note the lack of a '__init__' function, and functions do not have 'self' as their first argument"""
     def function1():
