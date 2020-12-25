@@ -16,22 +16,22 @@ varBytes = bytes('test', 'utf-8') #this will cast a string to a byte array with 
 
 
 varList = [] #an empty list
-varList = [1,2,3,4,5] #arrays are zero indexed
+varList = [1, 2, 3, 4, 5] #arrays are zero indexed
 varList = [(i) for i in range(8)] #a way to generate and initialize an array (see list comprehensions https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions )
-varList = list([1,2,3,4])
+varList = list([1, 2, 3, 4])
 print(varList[0])
 
-varTuple = (1,2,3) #tuples are like an array, elements in a tuple are nonmutable, but they can contain elements that are mutable (lists)
-varTuple = 1,2,3 #another way to initialize a tuple
+varTuple = (1, 2, 3) #tuples are like an array, elements in a tuple are nonmutable, but they can contain elements that are mutable (lists)
+varTuple = 1, 2, 3 #another way to initialize a tuple
 varTuple = (1) #for the single element case, this doesn't work to create a tuple
 varTuple = (1,) #following the element with a comma does create a single element tuple
 varTuple = tuple((1,))
 print(varTuple[0])
 
 varDic = {} #an empty dictionary
-varDic = {1:'s',3:'4','t':'a'} #a dictionary
+varDic = {1:'s', 3:'4', 't':'a'} #a dictionary
 varDic = {i : chr(65 + i) for i in range(10)} #list comprehensions also work with dictionaries
-varDic = dict({1:'s',3:'4','t':'a'})
+varDic = dict({1:'s', 3:'4', 't':'a'})
 print(varDic['t'])
 
 #TODO add in some unicode stuff
@@ -49,19 +49,19 @@ print("=======================================================================")
 varInt : int = 5
 varInt = 'notInt' #IDEs and type-checkers can enforce typing and throw an error, but this line will not throw an error during runtime
 varStr : str #can work for uninitialized variables
-varList : list = [1,2,3,4]
+varList : list = [1, 2, 3, 4]
 varDic : dict = {}
 varDic : 'random' = {} #can also use strings for annotations
 #for more advanced annotating, requires importing some modules
 from typing import List
-varList : List[int] = [1,2,3,4]
+varList : List[int] = [1, 2, 3, 4]
 print("=======================================================================")
 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
 #more examples below of how to use sets
 varSet = set() #an empty set
 varSet = set('abcdddde') #a set, holds an unordered set of unique elements (no duplicates
-varSet = {1,2,3,4,5,5,5,5,5,5,6}
+varSet = {1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6}
 #print(varSet[0]) #you can't access sets like this
 print(varSet) #note the duplicate elements are not printed
 print("=======================================================================")
@@ -77,16 +77,16 @@ varArray2Db = copy.deepcopy(varArray2D) #instead of copying the reference of var
 print("=======================================================================")
 
 #list slices
-varList = [1,2,3,4,5]
+varList = [1, 2, 3, 4, 5]
 print(varList[:2]) #starts from the begining of the list to element 2
 print(varList[-2:]) #starts from seconds last element of list to last element
 print(varList[2:]) #starts from element 2 to end of list
 
-print(varList + [6,7,8,9]) #can concatinate lists
+print(varList + [6, 7, 8, 9]) #can concatinate lists
 varList.append(6)
 
 #some useful list methods
-varList = [1,2,3,4,5]
+varList = [1, 2, 3, 4, 5]
 varList.append(6) #appends something to the end of the list
 varList.insert(0, 0) #at xth index, insert y
 print(varList.pop()) #removes and returns last element of list
@@ -97,21 +97,21 @@ del varList #'del' can also be used to delete an entire variable
 print("=======================================================================")
 
 #list comprehensions example from https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
-example1 = [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y] #this is equivalent to the below example2
+example1 = [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y] #this is equivalent to the below example2
 print(example1)
 example2 = []
-for x in [1,2,3]:
-    for y in [3,1,4]:
+for x in [1, 2, 3]:
+    for y in [3, 1, 4]:
         if x != y:
-            example2.append((x,y))
+            example2.append((x, y))
 print(example2)
 #both 'example1' and 'example2' are identicle
 print("=======================================================================")
 
 #sets 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
-set1 = {1,2,3,4,4,4,3,3,2,1,1}
-set2 = {0,1,8,9}
+set1 = {1, 2, 3, 4, 4, 4, 3, 3, 2, 1, 1}
+set2 = {0, 1, 8, 9}
 #some set operations
 print(set1 - set2) #lists stuff in set1 that is NOT in set2
 print(set1 | set2) #or
@@ -122,7 +122,7 @@ for i in sorted(set1): #a way to loop over a set, note: sorted returns a lists c
 print("=======================================================================")
 
 #dictionaries
-dic1 = {1:"test",2:"ing",3:"over"}
+dic1 = {1:"test", 2:"ing", 3:"over"}
 print(dic1.keys()) #returns the keys, but is unsorted/indexing not supported (not a list) (but you can still iterate over it in a for loop)
 print(list(dic1.keys()))
 print(sorted(dic1.keys()))
@@ -134,7 +134,7 @@ print("=======================================================================")
 import sys
 print((5).to_bytes(2,sys.byteorder)) #can convert an int to n many byte
 print(bytes([10])) #alternativly, you can use this, since 'bytes' is supposed to work on iterables
-print(bytes([10,20,30,40]))
+print(bytes([10, 20, 30, 40]))
 print(bytes(10)) #be carefull, this will actually make an array n bytes long instead of converting it
-print((bytes([2,4,6,8,10,12,14,16])).hex()) #convert byte array to hex string
+print((bytes([2, 4, 6, 8, 10, 12, 14, 16])).hex()) #convert byte array to hex string
 print("=======================================================================")
