@@ -46,13 +46,17 @@ if __name__ == '__main__': #used to signify the main of a program, good practice
 
     #===========================================================================
 
-    #you can implicidly not end a line using brackets, commas, etc
+    #you can implicidly not end a python interpriter line using brackets, commas, etc
     print(
         "Implicid",
         "not end line"
         )
 
-    #you can explicidly not end a line using the '\' at the end of a line
+    #you can explicidly not end a python interpriter line using the '\' at the end of a line
     print("Explicid" \
           + " not end line" \
           )
+
+    #===========================================================================
+    print(10_000) #you can put underscores in number litterals to increase readability without effecting the numbers
+    print(0xff_ff)

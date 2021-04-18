@@ -42,6 +42,11 @@ print("=======================================================================")
 Random stuff that needs organizing
 '''
 varInt, varReal = 6, 6.0 #python supports multivariable assignments
+
+_ = 'test' #this is a valid variable name, and the convention is to use it as null assignment. IE: assign a value to variable '_' to discard that value
+a, _, c = [1,2,3] #an example of a good use, discarding the second list element
+print(a, c)
+
 print("=======================================================================")
 
 #Variable Annotations https://www.python.org/dev/peps/pep-0526/
@@ -52,6 +57,7 @@ varStr : str #can work for uninitialized variables
 varList : list = [1, 2, 3, 4]
 varDic : dict = {}
 varDic : 'random' = {} #can also use strings for annotations
+
 #for more advanced annotating, requires importing some modules
 from typing import List
 varList : List[int] = [1, 2, 3, 4]
