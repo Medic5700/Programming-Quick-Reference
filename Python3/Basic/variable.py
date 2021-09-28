@@ -18,6 +18,7 @@ varBytes = bytes('test', 'utf-8') #this will cast a string to a byte array with 
 varList = [] #an empty list
 varList = [1, 2, 3, 4, 5] #arrays are zero indexed
 varList = [(i) for i in range(8)] #a way to generate and initialize an array (see list comprehensions https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions )
+varList = [i for i in range(8) if (i%2 == 0)] #a conditional list comprehension, will only include elements that satisfy the condition
 varList = list([1, 2, 3, 4])
 print(varList[0])
 
@@ -30,7 +31,7 @@ print(varTuple[0])
 
 varDic = {} #an empty dictionary
 varDic = {1:'s', 3:'4', 't':'a'} #a dictionary
-varDic = {i : chr(65 + i) for i in range(10)} #list comprehensions also work with dictionaries
+varDic = {i : chr(65 + i) for i in range(10)} #list comprehensions also works with dictionaries
 varDic = dict({1:'s', 3:'4', 't':'a'})
 print(varDic['t'])
 
@@ -59,8 +60,9 @@ varDic : dict = {}
 varDic : 'random' = {} #can also use strings for annotations
 
 #for more advanced annotating, requires importing some modules
-from typing import List
+from typing import List, Tuple
 varList : List[int] = [1, 2, 3, 4]
+varList : Tuple[int, ...] = [1, 2, 3, 4] #Note: the ellipsis only works for Tuple, not for List
 print("=======================================================================")
 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
@@ -74,7 +76,7 @@ print("=======================================================================")
 
 #multidimensional arrays aren't exactly standard in python, but can be made using an array of an array
 #Note: add-ons for python (numpy) allows support for large multidimensional arrays
-varArray2D = [[None for i in range(8)] for i in range(8)] #an example of making a two dimensional with all elements initilized to None, using 'list comprehensions'
+varArray2D = [[None for j in range(8)] for i in range(8)] #an example of making a two dimensional with all elements initilized to None, using 'list comprehensions'
 print(varArray2D[0][0])
 print("=======================================================================")
 
@@ -111,6 +113,8 @@ for x in [1, 2, 3]:
         if x != y:
             example2.append((x, y))
 print(example2)
+
+print([i for i in range(8) if (i%2 == 0)]) #a conditional list comprehension, will only include elements that satisfy the condition
 #both 'example1' and 'example2' are identicle
 print("=======================================================================")
 

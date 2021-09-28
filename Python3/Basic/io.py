@@ -44,6 +44,11 @@ tell()     - returns current file position
 close()    - closes the file
 '''
 print("=======================================================================")
+#TODO some stuff on the 'with' statement
+# https://www.geeksforgeeks.org/with-statement-in-python/
+
+
+print("=======================================================================")
 
 #some basic stuff on reading webpages
 import urllib.request #for url stuff

@@ -1,7 +1,7 @@
 Installation:
 	https://www.rust-lang.org/learn/get-started
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-	restup update
+	restup update stable	#updates rust
 
 Running:
 	cargo new [name]	#create a new project with [name], will create a simple 'HelloWorld'
