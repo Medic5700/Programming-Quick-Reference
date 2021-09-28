@@ -112,13 +112,18 @@ class TestC(unittest.TestCase):
         #Note that you also have to pass in the function arguments as additional arguments to self.asserRaises
 
 class TestD(unittest.TestCase):
-    """Demonstrate setUp()
+    """Demonstrate setUp() and tearDown()
     
     https://docs.python.org/3/library/unittest.html#organizing-test-code
     """
     def setUp(self):
         """setUp() runs before/at the beginning of each test function to set stuff up individually for each test functions"""
         self.array : List[int] = [1, 2, 3]
+    def tearDown(self):
+        """tearDown runs after each test function"""
+        #useful for stuff like closing a file
+        pass #'self.array' does not need to be torn down, as each test function gets it to be reinitialized as though it's a new class instance. Figured it would be a bad example.
+
     def testD1(self):
         self.array.append(4)
         self.assertEqual(self.array, [1, 2, 3, 4])
