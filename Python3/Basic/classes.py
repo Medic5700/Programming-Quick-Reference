@@ -58,5 +58,4 @@ class StaticClass:
     def function2():
         pass
 
-#TODO inheritance
-#TODO metaclasses
+

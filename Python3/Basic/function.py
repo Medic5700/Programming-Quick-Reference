@@ -4,8 +4,8 @@ def func0(a : int, b : int, c : int) -> None: #function decliration, with full a
     #can be multi-lined, first line should be a one liner discription (IE:"""Do X and return a list"""), then an empty line, then as much detail as needed
     #the docstring will be used by python's help function to list what it does when queried
     
-    global t1 #you must EXPLICITLY state global variables that can be used/modified
-    t2 : int  = 5#by annoatating a varable like this, the interpriter is explicidly creating a local variable in the function memory scope
+    global t1 #you can explicidly state global variables that can be used/modified
+    t2 : int  = 5 #by annoatating a varable like this, the interpriter is explicidly creating a local variable in the function memory scope
     print("Function 0: " + str(t1))
     return #this is valid, will return None (which is usually silently ignored)
     #functions don't need to have a return statment, but all functions return "None" if there is no return statment (which is usually silently ignored)

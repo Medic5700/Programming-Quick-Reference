@@ -57,12 +57,17 @@ varInt = 'notInt' #IDEs and type-checkers can enforce typing and throw an error,
 varStr : str #can work for uninitialized variables
 varList : list = [1, 2, 3, 4]
 varDic : dict = {}
-varDic : 'random' = {} #can also use strings for annotations
+varDic : 'random' = {} #can also use strings for annotations, but will show up as a warning in a type-checker and IDE
 
-#for more advanced annotating, requires importing some modules
+#for more advanced annotating, requires importing the 'typing' module
+# https://www.pythonsheets.com/notes/python-typing.html
 from typing import List, Tuple
 varList : List[int] = [1, 2, 3, 4]
 varList : Tuple[int, ...] = [1, 2, 3, 4] #Note: the ellipsis only works for Tuple, not for List
+
+#TODO creating types
+# https://docs.python.org/3/library/typing.html#typing.Generic
+# https://docs.python.org/3/library/typing.html#typing.TypeVar
 print("=======================================================================")
 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
@@ -148,3 +153,6 @@ print(bytes([10, 20, 30, 40]))
 print(bytes(10)) #be carefull, this will actually make an array n bytes long instead of converting it
 print((bytes([2, 4, 6, 8, 10, 12, 14, 16])).hex()) #convert byte array to hex string
 print("=======================================================================")
+
+#Python Dataclasses using Dataclass decorator #TODO
+# https://www.youtube.com/watch?v=vRVVyl9uaZc (If you're not using Python DATA CLASSES yet, you should 🚀)

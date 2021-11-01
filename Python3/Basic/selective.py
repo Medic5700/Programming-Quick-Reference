@@ -73,3 +73,7 @@ if any(temp) == True:
     print("if statement 6B = true")
 else:
     print("if statement 6 = false")
+
+print("=======================================================================")
+#switch/cases statement (New in Python 3.10) #TODO
+# https://stackoverflow.com/questions/60208/replacements-for-switch-statement-in-python
