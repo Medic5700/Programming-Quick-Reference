@@ -1,6 +1,13 @@
-def factorial (t1 : int) -> int:
-    if (t1 > 1):
-        return t1 * factorial (t1-1)
+"""
+Author: Medic5700
+
+This is an example of generating a factorial using recursion.
+"""
+
+def factorial (n : int) -> int:
+    """Takes in a number n, returns the factorial of n using recursion"""
+    if (n > 1):
+        return n * factorial (n - 1)
     else:
         return 1
 
