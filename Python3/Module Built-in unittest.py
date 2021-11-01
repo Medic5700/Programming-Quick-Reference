@@ -1,7 +1,7 @@
 """
 References:
     https://docs.python.org/3/library/unittest.html
-    https://www.youtube.com/watch?v=6tNS--WetLI
+    https://www.youtube.com/watch?v=6tNS--WetLI (Python Tutorial: Unit Testing Your Code with the unittest Module)[Corey Schafer]
 """
 """
 Available asserts
@@ -45,6 +45,7 @@ note: all asserts take an additional extra message argument
 """
 
 from time import sleep
+from typing import List
 import unittest
 
 #Note: the class name for testing doesn't need to start with 'Test', I'm just using 'TestA' for no particular reason
@@ -55,7 +56,7 @@ class TestA(unittest.TestCase): #You need to create a class and inherit from 'un
         self.assertEqual(True, True) #a success
     def testA2(self):
         self.assertEqual(True, False) #a fail
-    def testA3(self):
+    def testA3(self): #Note: test functions are not run in any particular order
         print("testA3 output, since this test succedes, this will be printed iff 'buffer' was not set when calling unittest.main()") 
         #output to stdout will NOT be discarded, and will print to the terminal unless unittest.main(buffer=True)
         self.assertEqual(True, True)
@@ -63,7 +64,7 @@ class TestA(unittest.TestCase): #You need to create a class and inherit from 'un
         print("testA4 output, this will print regardless of buffer level because this test fails")
         #when unittest.main(buffer=True), output will be echoed in the error message IF the test fails
         self.assertEqual(True, False) #a fail
-    def notATest(self): #this function will not run as it does not start with 'test'
+    def notATest(self): #this function will not run as the function name does not start with 'test'
         self.assertEqual(True, False)
 
 class TestB(unittest.TestCase):
@@ -106,7 +107,7 @@ class TestC(unittest.TestCase):
         raise Exception() #unhandled Exceptions are caught by the module and will show up in the test report as an error
         self.assertEqual(True, True)
     def testC2(self):
-        self.assertEqual(5, foo(5)) #unhandled Exceptions are caught by the module and will show up in the test report as an error
+        self.assertEqual(5, self.foo(5)) #unhandled Exceptions are caught by the module and will show up in the test report as an error
     def testC3(self):
         self.assertRaises(Exception, self.foo, 5) #This checks that an Exception is raised, and will show up as a test success
         #Note that you also have to pass in the function arguments as additional arguments to self.asserRaises
