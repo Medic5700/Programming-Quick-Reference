@@ -1,3 +1,9 @@
+"""
+Author: Medic5700
+
+Some stuff on python functions
+"""
+
 def func0(a : int, b : int, c : int) -> None: #function decliration, with full annotations
     """This is a docstring, used to tell what a function/class/module does""" #it's good practice to use this
     #it is good practice for a docstring to be in the format of 'input reults in output' IE:"""Do X and return a list."""
@@ -145,3 +151,34 @@ generater4 = (i**2 for i in range(10))
 for i in generater4:
     print("Generator4: " + str(i))
 print("=======================================================================")
+
+'''
+Some stuff on the the functools.cache decorator
+
+Reference:
+    https://www.youtube.com/watch?v=DnKxKFXB4NQ
+    https://docs.python.org/3.9/library/functools.html#functools.cache
+'''
+
+import sys
+version = sys.version_info
+assert version[0] == 3 and version[1] >= 9 #asserts that the python version is 3.9 or higher
+
+from functools import cache #The cache decorator is new in python 3.9
+
+@cache #The cache decorator takes the function and caches the results
+def fib (n : int) -> int:
+    """Takes in a number n, returns the nth number of the fionacci sequence using recursion"""
+
+    if (n == 0):
+        return 0
+    elif (n == 1):
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+for i in range(33):
+    print("Fibonacci1: " + str(fib(i)))
+
+#TODO function decorators (Think function wrappers)
+# https://realpython.com/primer-on-python-decorators/
