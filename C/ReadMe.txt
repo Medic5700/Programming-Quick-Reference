@@ -1,5 +1,6 @@
+Low level, Fast
 Compiling required
-#TODO
+Requires knowledge of how to manage memory/memory pointers
 
 Development Stack:
     Linux: # Ubuntu
@@ -12,4 +13,4 @@ Development Stack:
 
 Compile source code:
     Linux: #Ubuntu
-        $ g++ helloWorld.cpp -o helloWorld.exe
+        $ gcc helloWorld.c -o helloWorld.exe
