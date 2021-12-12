@@ -1,9 +1,11 @@
 /**
- * Authour:
- * convert a int to a string of binary, and a string of binary to an int
+ * Authour: Medic5700
+ * 
+ * Convert a int to a string of binary, and a string of binary to an int
 **/
 
 #include<stdio.h>
+#include<stdlib.h>
 
 void binary (int t1, char *t2){
 	int i;
@@ -15,9 +17,9 @@ void binary (int t1, char *t2){
 }
 
 int number(char* t1){
-	int t2=0;
+	int t2 = 0;
 	int i;
-	for (i=0;i<32;i++){
+	for (i=0; i<32; i++){
 		t2 = t2 << 1;
 		if (t1[i] == '1')
 			t2 = t2 + 1;
@@ -27,10 +29,10 @@ int number(char* t1){
 
 int main(){
 	int i;
-	char *binaryString = (char *) malloc(33*sizeof(char));
+	char *binaryString = (char *) malloc(33 * sizeof(char));
 	for (i=0; i<=255; i++){
 		binary(i, binaryString);
-		printf("%d\t=\t%s\t=\t%d\n",i ,binaryString, number(binaryString));
+		printf("%d\t=\t%s\t=\t%d\n", i, binaryString, number(binaryString));
 	}
 	free(binaryString);
 	return 0;
