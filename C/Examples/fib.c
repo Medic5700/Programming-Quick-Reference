@@ -1,4 +1,11 @@
+/**
+ * Authour: Medic5700
+ * 
+ * Print the fibonacci sequence
+**/
+
 #include<stdio.h>
+
 int fib(int t1){
 	if (t1==0){
 		return 0;
