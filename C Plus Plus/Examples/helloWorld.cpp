@@ -1,5 +1,12 @@
+/**
+ * Authour: Medic5700
+ * 
+ * Hello World
+**/
+
 #include <iostream>
-int main()
-{
-  std::cout << "Hello World";
+
+int main() {
+    std::cout << "Hello World\n";
+    return 0;
 }
