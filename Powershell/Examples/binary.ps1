@@ -1,4 +1,11 @@
+<#
+Author: Medic5700
+
+An example of converting a number to a binary string and back
+#>
+
 Function binary ($t1){
+    <# Takes in a number, returns a string representation of the number in binary (32-bit) #>
     $t2 = ""
 	for ($i=0; $i -le 32; $i++){
 		if ($t1%2 -eq 0){
@@ -13,6 +20,7 @@ Function binary ($t1){
 }
 
 Function number ($t1){
+    <# Takes in a number, returns a string representation of the number in binary (32-bit) #>
     $t2 = 0
     for ($i=0; $i -le 32; $i++){
         $t2 = $t2 * 2
