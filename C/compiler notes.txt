@@ -1,5 +1,5 @@
 /**
- * Auture: 
+ * Author: 
  * Description: Some notes on the compiler in C
 **/
 

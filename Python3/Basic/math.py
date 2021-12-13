@@ -4,7 +4,7 @@
 +   - addition
 -   - subtraction
 *   - multiplication
-@   - matrix multiplication (currently not implimented)
+@   - matrix multiplication (currently not implimented) #TODO include version time stamp of when last checked
 /   - division
 //  - floor division
 %   - modulus
@@ -43,7 +43,7 @@ print(math.pow(10,2))       #output 100.0
 print(math.sqrt(4))         #output 2.0
 
 '''
-Python3 also has support for Decimal, Fraction, and Complex Numbers
+Python3 also has support for Decimal, Fraction, and Complex Numbers #TODO
 '''
 
 '''

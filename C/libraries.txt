@@ -1,5 +1,5 @@
 /**
-* Auther: 
+* Author: 
 * Discription: 	some prototype-like-stuff for some rather usfull functions and such
 * 		it's mainly meant for a quick refreasher, NOT a replacment for wikipedia
 *		(although wikipedia was used to construct this :P )

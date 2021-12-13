@@ -4,6 +4,13 @@ Author: Medic5700
 Some stuff on python functions
 """
 
+#random odds and ends #TODO
+#function attributes
+def funcX(a):
+    print(a)
+funcX.test = 5
+print("=======================================================================")
+
 def func0(a : int, b : int, c : int) -> None: #function decliration, with full annotations
     """This is a docstring, used to tell what a function/class/module does""" #it's good practice to use this
     #it is good practice for a docstring to be in the format of 'input reults in output' IE:"""Do X and return a list."""
@@ -18,14 +25,6 @@ def func0(a : int, b : int, c : int) -> None: #function decliration, with full a
     
 t1 = 10
 func0(1,2,3)
-print("=======================================================================")
-
-#random odds and ends #TODO
-#function attributes
-def funcX(a):
-    print(a)
-funcX.test = 5
-
 print("=======================================================================")
 
 def func1(a=10): #default values for arguments
