@@ -1,5 +1,9 @@
 #lang scheme
 
+;;  Author: Medic5700
+;;
+;;  This is an example of generating a factorial using recursion.
+
 ;function decliration
 (define factorial (lambda (x) (if (= x 0) 1 (* x (factorial (- x 1))))))
 

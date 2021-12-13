@@ -1,5 +1,9 @@
 #lang scheme
 
+;;  Author: Medic5700
+;;
+;;  This is an example of generating the fibonacci sequence using recursion.
+
 ;function decliration
 (define fib (lambda (x) (if (<= x 0) 0 (if (= x 1) 1 (+ (fib (- x 1)) (fib (- x 2)))))))
 

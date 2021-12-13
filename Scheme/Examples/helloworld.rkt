@@ -1,3 +1,8 @@
 #lang scheme
-(display "Hello World")
-;(printf "Hello World") 
+
+;;  Author: Medic5700
+;;
+;;  Hello World
+
+(display "Hello World\n")
+;(printf "Hello World\n")
