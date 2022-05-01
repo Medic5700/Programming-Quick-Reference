@@ -1,3 +1,8 @@
+#TODO inheritance
+#TODO multi-inheritance
+#TODO abstractmethods
+#TODO super() # https://www.programiz.com/python-programming/methods/built-in/super
+
 class InstanceClass:
     """This class can be instatiated, note that all functions have 'self' as the first arg, and it there is an '__init__' function"""
     # https://docs.python.org/3/reference/datamodel.html#basic-customization
@@ -58,4 +63,5 @@ class StaticClass:
     def function2():
         pass
 
-
+#TODO stuff on actually instantiating the class
+#TODO stuff on the self.super() function (IE: calling the superclass of a class during instatiation of a class to return an oject that is an instantiated instance of the superclass)

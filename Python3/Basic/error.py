@@ -6,25 +6,25 @@
 temp = 0
 try:
     temp = 2/0
-except: #this will execute when ANY error comes up in the above try statment
+except: # this will execute when ANY error comes up in the above try statment
     print("Error 0: attempt to divide by zero")
-else: #optional
-    #will execute iff no exceptions are raised in the try clause
+else: # optional
+    # will execute iff no exceptions are raised in the try clause
     temp = 2
-finally: #optional
-    #will always execute after everything even if any exceptions are raised, 'finally' will run, and the exception will be re-raised
+finally: # optional
+    # will always execute after everything even if any exceptions are raised, 'finally' will run, and the exception will be re-raised
     print("Error 0 => temp = " + str(temp))
 print("=======================================================================")
 
 try:
     temp = 2/0
-except NameError: #this allows the catching and handling of muletiple differet errors
+except NameError: # this allows the catching and handling of muletiple differet errors
     print("Error 1: NameError")
 except ZeroDivisionError:
     print("Error 1: ZeroDicisionError")
-except (IndexError, SyntaxError, ValueError): #you can handle multiple errors at the same time like this
+except (IndexError, SyntaxError, ValueError): # you can handle multiple errors at the same time like this
     print("Error 1: Multiple Errors") 
-except: #the all case, will catch any remaining error
+except: # the all case, will catch any remaining error
     print("Error 1: SomeError")
 ''' (some common) built in exceptions, see link for full list
 https://docs.python.org/3/library/exceptions.html#bltin-exceptions
@@ -43,19 +43,19 @@ OS Errors
 '''
 print("=======================================================================")
 
-#this one allows you to see what error information is given
+# this one allows you to see what error information is given
 try:
     temp = 2/0
 except Exception as inst:
     print("Error 2: " + str(inst))
 
-#raising an error
+# raising an error
 try:
     raise ZeroDivisionError
 except:
     print("Error 3: Raised a ZeroDivisionError")
 
-#raising an error with information
+# raising an error with information
 try:
     raise ZeroDivisionError("Information for Error 4")
 except Exception as i:

@@ -19,10 +19,10 @@ def TCPServer():
           "\tconnection: " + str(connection) + "\n" +
           "\taddress:    " + str(address))
     while (True):
-        data = connection.recv(1024).decode("utf-8") #will wait until new data is received
+        data = connection.recv(1024).decode("utf-8") # will wait until new data is received
         
         if not data:
-            break #if the connection terminates, no data is received, and breaks from the loop
+            break # if the connection terminates, no data is received, and breaks from the loop
         print("Recived: " + str(data))
         
         print("Echoing data back")
@@ -65,13 +65,13 @@ def UDPServer():
         print("Recived: " + str(data))
         socket1.sendto(data.encode('utf-8'), address)
         
-    socket1.close() #this isn't neccissary since the above loop runs indefinatly
+    socket1.close() # this isn't neccissary since the above loop runs indefinatly
     
 def UDPClient():
     """
     """
     host = "127.0.0.1"
-    port = 6666 #note, this is a different port, since we need a different port from the server
+    port = 6666 # note, this is a different port, since we need a different port from the server
     
     server = ('127.0.0.1', 5555)
     
@@ -88,7 +88,7 @@ def UDPClient():
     socket1.close()
     
 if __name__ == "__main__":
-    #since this each function represents a different part that runs in parallel, it needs a __main__ to let the user decide which to run
+    # since this each function represents a different part that runs in parallel, it needs a __main__ to let the user decide which to run
     ClientServer = input("Is it a client? (T/F):").lower()
     TPC_UDP = input("Is it TCP? (T/F):").lower()
     
@@ -106,3 +106,4 @@ if __name__ == "__main__":
         else:
             print("Running UDP Server")
             UDPServer()
+            

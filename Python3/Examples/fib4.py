@@ -6,11 +6,11 @@ This is an example of the function caching decorator via generating the fibonacc
 
 import sys
 version = sys.version_info
-assert version[0] == 3 and version[1] >= 9 #asserts that the python version is 3.9 or higher
+assert version[0] == 3 and version[1] >= 9 # asserts that the python version is 3.9 or higher
 
-from functools import cache #The cache decorator is new in python 3.9
+from functools import cache # The cache decorator is new in python 3.9
 
-@cache #The cache decorator takes the function and caches the results
+@cache # The cache decorator takes the function and caches the results
 def fib (n : int) -> int:
     """Takes in a number n, returns the nth number of the fionacci sequence using recursion"""
 

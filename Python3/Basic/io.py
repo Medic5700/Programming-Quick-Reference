@@ -1,14 +1,14 @@
 #basic input/output to console
 print("Some output")
-test = input("input test:") #some input
-print("The ", end="") #can specify what print ends the line with, in this case nothing
+test = input("input test:") # some input
+print("The ", end="") # can specify what print ends the line with, in this case nothing
 print("input is = " + test)
 
 print("=======================================================================")
 
 print("printing with str:   " + str("test \t\t test \u25a0"))
-print("printing with repr:  " + repr("test \t\t test \u25a0")) #repr is like casting with str, but returns a human readable string in cases with standard escape characters
-print("printing with ascii: " + ascii("test \t\t test \u25a0")) #ascii returns a string, but also converts all characters (think unicod) into a human readable string
+print("printing with repr:  " + repr("test \t\t test \u25a0")) # repr is like casting with str, but returns a human readable string in cases with standard escape characters
+print("printing with ascii: " + ascii("test \t\t test \u25a0")) # ascii returns a string, but also converts all characters (think unicod) into a human readable string
 
 print("=======================================================================")
 
@@ -27,11 +27,11 @@ f1 = open("test.log", "w", encoding="utf-8")
 '''
 
 f1.write("This is a test")
-f1.flush() #flushes stuff writen writen to file to the file
+f1.flush() # flushes stuff writen writen to file to the file
 f1.close()
 
 f1 = open("test.log", "r", encoding="utf-8")
-print("This is what's in the file:\"" + f1.read() + "\"") #note: read() returns '' when EOF reached
+print("This is what's in the file:\"" + f1.read() + "\"") # note: read() returns '' when EOF reached
 print(f1.tell())
 f1.close()
 ''' some usefull methods for files:
@@ -51,7 +51,7 @@ print("=======================================================================")
 print("=======================================================================")
 
 #some basic stuff on reading webpages
-import urllib.request #for url stuff
+import urllib.request # for url stuff
 webpageObject = urllib.request.urlopen("http://www.google.com/robots.txt")
 data = (webpageObject.read()).decode('utf-8')
 print("Data from www.google.com/robots.txt:\n"+data)
@@ -63,9 +63,9 @@ print("=======================================================================")
 it is limited in what it can encode, and the result takes a lot more space'''
 import json
 anObject = [1,"test",3.5,[1,2,3,4,5,6,7,8]]
-print(json.dumps(anObject)) #this returns a string representation of the object
+print(json.dumps(anObject)) # this returns a string representation of the object
 print(json.dumps(anObject, sort_keys=True, indent=4))
-newObject = json.loads(json.dumps(anObject)) #turns a string back into an object
+newObject = json.loads(json.dumps(anObject)) # turns a string back into an object
 print(newObject)
 
 print("=======================================================================")

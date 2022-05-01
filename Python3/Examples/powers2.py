@@ -9,4 +9,4 @@ reference:
 '''
 
 for i in range(21):
-    print(f"2^{i}\t=\t{2**i}") #note: expressions inside the brackets implicitly call str()
+    print(f"2^{i}\t=\t{2**i}") # note: expressions inside the brackets implicitly call str()

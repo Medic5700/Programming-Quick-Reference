@@ -5,17 +5,17 @@ https://stackoverflow.com/questions/287871/how-to-print-colored-text-in-terminal
 http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
 https://tintin.sourceforge.io/info/ansicolor/
 '''
-#note: can use "\33[{xyz}m" or "\u001b[{xyz}m" since it's 'ESC' in ASCII, represented in Octal or Hexadecimal respectivly
+# note: can use "\33[{xyz}m" or "\u001b[{xyz}m" since it's 'ESC' in ASCII, represented in Octal or Hexadecimal respectivly
 
 for i in range(0,128):
-	code = '\33[' + str(i) + 'm' #this is the ANSI escape code
+	code = '\33[' + str(i) + 'm' # this is the ANSI escape code
 	text = '\\33[' + str(i) + 'm'
-	end = '\33[0m' #this is the ANSI escape code terminator
+	end = '\33[0m' # this is the ANSI escape code terminator
 	print(code + text.ljust(10) + end, end='')
 	print("") if (i%8 == 7) else None
 print("")
 
-#you can also combine multiple codes together like the following
+# you can also combine multiple codes together like the following
 print('combining multiple ANSI codes together')
 print('\33[4;5;31;47m Hello World \33[0m')
 print("")
