@@ -28,18 +28,20 @@ except: # the all case, will catch any remaining error
     print("Error 1: SomeError")
 ''' (some common) built in exceptions, see link for full list
 https://docs.python.org/3/library/exceptions.html#bltin-exceptions
- exception IndexError - Raised when a sequence subscript is out of range
- exception KeyError - Raised when a mapping (dictionary) key is not found in the set of existing keys
- exception NameError - Raised when a local or global name is not found
- exception RecursionError - It is raised when the interpreter detects that the maximum recursion depth (see sys.getrecursionlimit()) is exceeded
- exception SyntaxError - Raised when the parser encounters a syntax error. This may occur in an import statement, in a call to the built-in functions exec() or eval(), or when reading the initial script or standard input (also interactively)
- exception TypeError - Raised when an operation or function is applied to an object of inappropriate type
- exception ZeroDivisionError - Raised when the second argument of a division or modulo operation is zero
- exception ValueError - Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value
+    exception IndexError - Raised when a sequence subscript is out of range
+    exception KeyError - Raised when a mapping (dictionary) key is not found in the set of existing keys
+    exception NameError - Raised when a local or global name is not found
+    exception RecursionError - It is raised when the interpreter detects that the maximum recursion depth (see sys.getrecursionlimit()) is exceeded
+    exception SyntaxError - Raised when the parser encounters a syntax error. This may occur in an import statement, in a call to the built-in functions exec() or eval(), or when reading the initial script or standard input (also interactively)
+    exception TypeError - Raised when an operation or function is applied to an object of inappropriate type
+    exception ZeroDivisionError - Raised when the second argument of a division or modulo operation is zero
+    exception ValueError - Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value
 OS Errors
- exception FileExistsError - Raised when trying to create a file or directory which already exists
- exception FileNotFoundError - Raised when a file or directory is requested but doesn’t exist
- exception PermissionError - Raised when trying to run an operation without the adequate access rights 
+    exception FileExistsError - Raised when trying to create a file or directory which already exists
+    exception FileNotFoundError - Raised when a file or directory is requested but doesn't exist
+    exception PermissionError - Raised when trying to run an operation without the adequate access rights 
+
+    exception NotImplementedError - Raised when a method has not been implemented yet.
 '''
 print("=======================================================================")
 
@@ -70,9 +72,17 @@ class myError(Exception):
         self.y = y
     def __str__(self):
         return "This is myError"
+
 try:
     raise myError(5,6)
 except myError as e:
     print("Error 5: raised an error = " + str(e.x))
     print(e)
 print("=======================================================================")
+
+# Using NotImplementedError
+# usefull duruing development to indicate that a method has not been implemented yet, is in progress, etc
+def addNumbers(a : int, b : int):
+    raise NotImplementedError
+
+print(addNumbers(1,2))

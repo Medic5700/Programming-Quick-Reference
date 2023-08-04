@@ -1,42 +1,52 @@
+'''
+Author: Medic5700
+
+Some stuff on variables
+'''
+
 #basic variable types and respective casting
-varInt = int(5)
-varInt = int('5a', 16) # converts hex string into a number
-varInt = 0xA # Hex notation for a number
-varInt = 0b1010 # Binary notation for a number
-varInt = 0o10 # Octal notation for a number
+varInt : int = int(5)
+varInt : int = int('5a', 16) # converts hex string into a number
+varInt : int = 0xA # Hex notation for a number
+varInt : int = 0b1010 # Binary notation for a number
+varInt : int = 0o10 # Octal notation for a number
 
-varReal = float(5.0)
+# reminder: you can use '_' in numbers to make them more readable
+varInt : int = 0b10101010_10101010_10101010_10101010
 
-varString = 'hello' # single quotes and double quotes can be used interchangeably, *AS LONG AS* you use the same type of quotes to open and close the string
-varString = "hello"
-varString = str("hello") # note: strings are not mutable
-varChr = chr(65) # char doesn't exist in python, they are just a standard string of len 1
+varReal : float = 5.0
+varReal : float = float(5.0)
 
-varBool = bool(True)
+varString : str = 'hello' # single quotes and double quotes can be used interchangeably, *AS LONG AS* you use the same type of quotes to open and close the string
+varString : str = "hello"
+varString : str = str("hello") # note: strings are not mutable
+varChr : str = chr(65) # char doesn't exist in python, they are just a standard string of len 1
+#TODO stuff on f-strings, see '../strings.py'
 
-varBytes = b"test" # this creates a byte array, note: byte arrays are not mutable
-varBytes = bytes(5) # this will actually create a byte array 5 bytes long all initalized to zero
-varBytes = bytes('test', 'utf-8') # this will cast a string to a byte array with a specific encoding
+varBool : bool = bool(True)
 
+varBytes : bytes = b"test" # this creates a byte array, note: byte arrays are not mutable
+varBytes : bytes = bytes(5) # this will actually create a byte array 5 bytes long all initalized to zero
+varBytes : bytes = bytes('test', 'utf-8') # this will cast a string to a byte array with a specific encoding
 
-varList = [] # an empty list
-varList = [1, 2, 3, 4, 5] # arrays are zero indexed
-varList = [(i) for i in range(8)] # a way to generate and initialize an array (see list comprehensions https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions )
-varList = [i for i in range(8) if (i%2 == 0)] # a conditional list comprehension, will only include elements that satisfy the condition
-varList = list([1, 2, 3, 4])
+varList : list = [] # an empty list
+varList : list[int] = [1, 2, 3, 4, 5] # arrays are zero indexed
+varList : list[int] = [(i) for i in range(8)] # a way to generate and initialize an array (see list comprehensions https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions )
+varList : list[int] = [i for i in range(8) if (i%2 == 0)] # a conditional list comprehension, will only include elements that satisfy the condition
+varList : list[int] = list([1, 2, 3, 4])
 print(varList[0])
 
-varTuple = (1, 2, 3) # tuples are like an array, elements in a tuple are nonmutable, but they can contain elements that are mutable (lists)
-varTuple = 1, 2, 3 # another way to initialize a tuple
-varTuple = (1) # for the single element case, this doesn't work to create a tuple
-varTuple = (1,) # following the element with a comma does create a single element tuple
-varTuple = tuple((1,))
+varTuple : tuple[int] = (1, 2, 3) # tuples are like an array, elements in a tuple are nonmutable, but they can contain elements that are mutable (lists)
+varTuple : tuple[int] = 1, 2, 3 # another way to initialize a tuple
+varTuple : int = (1) # for the single element case, this doesn't work to create a tuple
+varTuple : tuple[int] = (1,) # following the element with a comma does create a single element tuple
+varTuple : tuple[int] = tuple((1,))
 print(varTuple[0])
 
-varDic = {} # an empty dictionary
-varDic = {1:'s', 3:'4', 't':'a'} # a dictionary
-varDic = {i : chr(65 + i) for i in range(10)} # list comprehensions also works with dictionaries
-varDic = dict({1:'s', 3:'4', 't':'a'})
+varDic : dict = {} # an empty dictionary
+varDic : dict = {1:'s', 3:'4', 't':'a'} # a dictionary
+varDic : dict = {i : chr(65 + i) for i in range(10)} # list comprehensions also works with dictionaries
+varDic : dict = dict({1:'s', 3:'4', 't':'a'})
 print(varDic['t'])
 
 #TODO add in some unicode stuff
@@ -65,10 +75,15 @@ varDic : 'random' = {} # can also use strings for annotations, but will show up 
 
 #for more advanced annotating, requires importing the 'typing' module
 # https://www.pythonsheets.com/notes/python-typing.html
-from typing import List, Tuple
+from typing import Any, Callable, Dict, List, Literal, Optional, Set, Tuple
+# Note: some of the typings are being depreticated, and replaced with the generic counterparts. IE: 'typing.List' gets replace with 'list', 'typing.Dict' gets replace with 'dict', etc.
+# https://peps.python.org/pep-0585/
 varList : List[int] = [1, 2, 3, 4]
 varList : Tuple[int, ...] = [1, 2, 3, 4] # Note: the ellipsis only works for Tuple, not for List
 
+from typing import NoReturn
+
+#TODO stuff on unions of types
 #TODO creating types
 # https://docs.python.org/3/library/typing.html#typing.Generic
 # https://docs.python.org/3/library/typing.html#typing.TypeVar
@@ -76,25 +91,25 @@ print("=======================================================================")
 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
 #more examples below of how to use sets
-varSet = set() # an empty set
-varSet = set('abcdddde') # a set, holds an unordered set of unique elements (no duplicates)
-varSet = {1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6}
+varSet : set = set() # an empty set
+varSet : set = set('abcdddde') # a set, holds an unordered set of unique elements (no duplicates)
+varSet : set = {1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6}
 #print(varSet[0]) # you can't access sets like this
 print(varSet) # note the duplicate elements are not printed
 print("=======================================================================")
 
 #multidimensional arrays aren't exactly standard in python, but can be made using an array of an array
 # Note: add-ons for python (numpy) allows support for large multidimensional arrays
-varArray2D = [[None for j in range(8)] for i in range(8)] # an example of making a two dimensional with all elements initilized to None, using 'list comprehensions'
+varArray2D : list[list[None]] = [[None for j in range(8)] for i in range(8)] # an example of making a two dimensional with all elements initilized to None, using 'list comprehensions'
 print(varArray2D[0][0])
 print("=======================================================================")
 
 import copy
-varArray2Db = copy.deepcopy(varArray2D) # instead of copying the reference of varArray2D, deepcopy(x) makes a complete element by element copy of x, etc...
+varArray2Db : list[list[None]] = copy.deepcopy(varArray2D) # instead of copying the reference of varArray2D, deepcopy(x) makes a complete element by element copy of x, etc...
 print("=======================================================================")
 
 #list slices
-varList = [1, 2, 3, 4, 5]
+varList : list[int] = [1, 2, 3, 4, 5]
 print(varList[:2]) # starts from the begining of the list to element 2
 print(varList[-2:]) # starts from seconds last element of list to last element
 print(varList[2:]) # starts from element 2 to end of list
@@ -103,7 +118,7 @@ print(varList + [6, 7, 8, 9]) # can concatinate lists
 varList.append(6)
 
 # some useful list methods
-varList = [1, 2, 3, 4, 5]
+varList : list[int] = [1, 2, 3, 4, 5]
 varList.append(6) # appends something to the end of the list
 varList.insert(0, 0) # at xth index, insert y
 print(varList.pop()) # removes and returns last element of list
@@ -114,7 +129,7 @@ del varList # 'del' can also be used to delete an entire variable
 print("=======================================================================")
 
 #list comprehensions example from https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
-example1 = [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y] #this is equivalent to the below example2
+example1 : list[tuple[int]] = [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y] #this is equivalent to the below example2
 print(example1)
 example2 = []
 for x in [1, 2, 3]:
@@ -122,26 +137,35 @@ for x in [1, 2, 3]:
         if x != y:
             example2.append((x, y))
 print(example2)
-
-print([i for i in range(8) if (i%2 == 0)]) # a conditional list comprehension, will only include elements that satisfy the condition
 # both 'example1' and 'example2' are identicle
+
+example3 : list[int] = [i for i in range(8) if (i%2 == 0)] # a conditional list comprehension, will only include elements that satisfy the condition
+print(example3)
+example4 : list[int] = []
+for i in range(8):
+    if (i%2 == 0):
+        example4.append(i)
+print(example4)
+# both 'example3' and 'example4' are identicle
+
 print("=======================================================================")
 
 #sets 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
-set1 = {1, 2, 3, 4, 4, 4, 3, 3, 2, 1, 1}
-set2 = {0, 1, 8, 9}
+set1 : set[int] = {1, 2, 3, 4, 4, 4, 3, 3, 2, 1, 1}
+set2 : set[int] = {0, 1, 8, 9}
 # some set operations
 print(set1 - set2) # lists stuff in set1 that is NOT in set2
 print(set1 | set2) # or
 print(set1 & set2) # and
 print(set1 ^ set2) # xor
+i : int
 for i in sorted(set1): # a way to loop over a set, note: sorted returns a lists containing elements in the set, but leaves set unchanged
     print(str(i))
 print("=======================================================================")
 
 #dictionaries
-dic1 = {1:"test", 2:"ing", 3:"over"}
+dic1 : dict[int, str] = {1:"test", 2:"ing", 3:"over"}
 print(dic1.keys()) # returns the keys, but is unsorted/indexing not supported (not a list) (but you can still iterate over it in a for loop)
 print(list(dic1.keys()))
 print(sorted(dic1.keys()))

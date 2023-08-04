@@ -1,6 +1,13 @@
+'''
+Author: Medic5700
+
+Introduction Python basics
+'''
+
 '''block comment'''
-#another comment
-"""A docstring""" # this should only be used in functions, but it's here to show what it is ahead of time
+"""Another block comment"""
+# another comment
+
 import sys
 import getopt
 
@@ -25,7 +32,7 @@ if __name__ == '__main__': # used to signify the main of a program, good practic
     # http://docs.python.org/2/library/getopt.html
     # uses import getopt
     try:
-        opts, args = getopt.getopt((sys.argv[1:]),'h')
+        opts, args = getopt.getopt((sys.argv[1:]), 'h')
         # second argument is for which arguments to look for, one's that require an argument after an option must go after a ':'
         # opts is argument pairs, as parsed by getopt
         # args is everything else after the stuff you're looking for
@@ -65,7 +72,7 @@ if __name__ == '__main__': # used to signify the main of a program, good practic
     # by convention, the '_' is used as a null variable, IE: you can dump unneeded data into it
     for _ in range(10): # here, the '_' is not used except for itteration, and thus, does not need a name, hence why '_' is used
         print("hello")
-    a = (1,2,3)
+    a = (1, 2, 3)
     t1, _, _ = a # here the '_' is used to ignore the last two values in the tuple
     print(t1)
     # note: '_' is still a valid variable name, and you can read data from it, but don't

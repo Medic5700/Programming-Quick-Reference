@@ -1,4 +1,9 @@
-#basic input/output to console
+'''
+Author: Medic5700
+
+Basic input/output to console and files
+'''
+
 print("Some output")
 test = input("input test:") # some input
 print("The ", end="") # can specify what print ends the line with, in this case nothing
@@ -47,14 +52,13 @@ print("=======================================================================")
 #TODO some stuff on the 'with' statement
 # https://www.geeksforgeeks.org/with-statement-in-python/
 
-
 print("=======================================================================")
 
 #some basic stuff on reading webpages
 import urllib.request # for url stuff
 webpageObject = urllib.request.urlopen("http://www.google.com/robots.txt")
 data = (webpageObject.read()).decode('utf-8')
-print("Data from www.google.com/robots.txt:\n"+data)
+print("Data from www.google.com/robots.txt:\n" + data)
 print("=======================================================================")
 
 #some basic stuff on reading/writing json
@@ -62,7 +66,7 @@ print("=======================================================================")
 '''json is pretty secure/hard to exploit just because of how simple the decoder is
 it is limited in what it can encode, and the result takes a lot more space'''
 import json
-anObject = [1,"test",3.5,[1,2,3,4,5,6,7,8]]
+anObject = [1, "test", 3.5, [1, 2, 3, 4, 5, 6, 7, 8]]
 print(json.dumps(anObject)) # this returns a string representation of the object
 print(json.dumps(anObject, sort_keys=True, indent=4))
 newObject = json.loads(json.dumps(anObject)) # turns a string back into an object
