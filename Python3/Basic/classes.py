@@ -1,7 +1,19 @@
+"""
+Author: Medic5700
+
+Stuff on python classes
+"""
+
 #TODO inheritance
 #TODO multi-inheritance
 #TODO abstractmethods
 #TODO super() # https://www.programiz.com/python-programming/methods/built-in/super
+#TODO private variable 'name mangling' ( https://www.youtube.com/watch?v=0hrEaA3N3lk )
+#TODO Use decorators to automaticaly call class variable getters and setters. IE: object.x = 5 will automatically call it's setter iff the proper decorator is set up( https://youtu.be/E8NijUYfyus?t=272 )
+#TODO the use of 'super()' with class inhearatence ( https://www.youtube.com/watch?v=X1PQ7zzltz4 )
+#TODO the use of __slots__ to significantly reduce memory usage at the cost of less flexibility ( https://www.youtube.com/watch?v=Iwf17zsDAnY )
+#TODO stuff on staticmethod and classmethod ( https://www.youtube.com/watch?v=SXApHXsDe8I )
+#TODO stuff on dataclasses.dataclass ( https://www.youtube.com/watch?v=vBH6GRJ1REM )
 
 class InstanceClass:
     """This class can be instatiated, note that all functions have 'self' as the first arg, and it there is an '__init__' function"""
@@ -65,3 +77,4 @@ class StaticClass:
 
 #TODO stuff on actually instantiating the class
 #TODO stuff on the self.super() function (IE: calling the superclass of a class during instatiation of a class to return an oject that is an instantiated instance of the superclass)
+#TODO use the typing.override decorator to explicidly override functions inhearited from parent class ( https://youtu.be/8l4UWz48Elc?t=540 )

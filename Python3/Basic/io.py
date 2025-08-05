@@ -3,6 +3,7 @@ Author: Medic5700
 
 Basic input/output to console and files
 '''
+#TODO os.path.exists(filepath) and other file management functions
 
 print("Some output")
 test = input("input test:") # some input
@@ -19,16 +20,17 @@ print("=======================================================================")
 
 #some stuff on files
 f1 = open("test.log", "w", encoding="utf-8")
-'''file modes:
-'r' = read (default)
-'w' = write
-'x' = exclusive file creation, fails if file exists
-'a' = append
+'''
+file modes:
+    'r'                                 - read (default)
+    'w'                                 - write
+    'x'                                 - exclusive file creation, fails if file exists
+    'a'                                 - append
 
-'b' = binary mode
-'t' = text mode (default)
+    'b'                                 - binary mode
+    't'                                 - text mode (default)
 
-'+' = updating (reading and writing)
+    '+'                                 - updating (reading and writing)
 '''
 
 f1.write("This is a test")
@@ -49,8 +51,9 @@ tell()     - returns current file position
 close()    - closes the file
 '''
 print("=======================================================================")
-#TODO some stuff on the 'with' statement
+#TODO some stuff on the 'with' statement ( https://www.youtube.com/watch?v=V6IX3k8PDBc )
 # https://www.geeksforgeeks.org/with-statement-in-python/
+#TODO some common exceptions when opening a file
 
 print("=======================================================================")
 

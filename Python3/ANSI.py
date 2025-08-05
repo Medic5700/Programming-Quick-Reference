@@ -119,7 +119,7 @@ Prev Line: \u001b[{n}F moves cursor to beginning of line n lines down
 Set Column: \u001b[{n}G moves cursor to column n
 Set Position: \u001b[{n};{m}H moves cursor to row n column m
 
-Clear Screen: \u001b[{n}J clears the screen ◦n=0 clears from cursor until end of screen,
+Clear Screen: \u001b[{n}J clears the screen, n=0 clears from cursor until end of screen,
 n=1 clears from cursor to beginning of screen
 n=2 clears entire screen
 

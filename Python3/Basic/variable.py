@@ -1,8 +1,8 @@
-'''
+"""
 Author: Medic5700
 
 Some stuff on variables
-'''
+"""
 
 #basic variable types and respective casting
 varInt : int = int(5)
@@ -17,17 +17,26 @@ varInt : int = 0b10101010_10101010_10101010_10101010
 varReal : float = 5.0
 varReal : float = float(5.0)
 
+varComplex : complex = 1+2j
+varComplex : complex = complex(1, 2)
+
 varString : str = 'hello' # single quotes and double quotes can be used interchangeably, *AS LONG AS* you use the same type of quotes to open and close the string
 varString : str = "hello"
 varString : str = str("hello") # note: strings are not mutable
-varChr : str = chr(65) # char doesn't exist in python, they are just a standard string of len 1
+varChr : str = chr(65) # char type doesn't exist in python, they are just a standard string of len 1
+varString : str = chr(128512) # note: strings are unicode by default
+print(chr(128512), ord(chr(128512)))
 #TODO stuff on f-strings, see '../strings.py'
 
 varBool : bool = bool(True)
+varBool : bool = bool(False)
+#TODO include stuff on converting other variables to bool, IE: zero or empty container == False, everything else == True # should verify with testing
 
-varBytes : bytes = b"test" # this creates a byte array, note: byte arrays are not mutable
+varBytes : bytes = b"test" # this creates a byte array, note: bytes are not mutable
 varBytes : bytes = bytes(5) # this will actually create a byte array 5 bytes long all initalized to zero
 varBytes : bytes = bytes('test', 'utf-8') # this will cast a string to a byte array with a specific encoding
+
+#TODO ByteArray IE: just like bytes, except mutable
 
 varList : list = [] # an empty list
 varList : list[int] = [1, 2, 3, 4, 5] # arrays are zero indexed
@@ -48,6 +57,9 @@ varDic : dict = {1:'s', 3:'4', 't':'a'} # a dictionary
 varDic : dict = {i : chr(65 + i) for i in range(10)} # list comprehensions also works with dictionaries
 varDic : dict = dict({1:'s', 3:'4', 't':'a'})
 print(varDic['t'])
+
+#TODO sets
+#TODO frozensets, just like a set except it can't be mutated
 
 #TODO add in some unicode stuff
 print("=======================================================================")
@@ -83,12 +95,14 @@ varList : Tuple[int, ...] = [1, 2, 3, 4] # Note: the ellipsis only works for Tup
 
 from typing import NoReturn
 
-#TODO stuff on unions of types
+#TODO stuff on unions of types, IE: "x : int | float = 5"
 #TODO creating types
 # https://docs.python.org/3/library/typing.html#typing.Generic
 # https://docs.python.org/3/library/typing.html#typing.TypeVar
+#TODO TypeAlias, allowing to use a class as a type in itself while it's being defined ( https://youtu.be/mvJuxowIwIc?t=251 )
 print("=======================================================================")
 
+#TODO redundant?
 # https://docs.python.org/3/tutorial/datastructures.html#sets
 #more examples below of how to use sets
 varSet : set = set() # an empty set
@@ -108,6 +122,7 @@ import copy
 varArray2Db : list[list[None]] = copy.deepcopy(varArray2D) # instead of copying the reference of varArray2D, deepcopy(x) makes a complete element by element copy of x, etc...
 print("=======================================================================")
 
+#TODO should be at top of file?
 #list slices
 varList : list[int] = [1, 2, 3, 4, 5]
 print(varList[:2]) # starts from the begining of the list to element 2
@@ -165,6 +180,7 @@ for i in sorted(set1): # a way to loop over a set, note: sorted returns a lists 
 print("=======================================================================")
 
 #dictionaries
+#TODO include more examples of looping over dictionaries
 dic1 : dict[int, str] = {1:"test", 2:"ing", 3:"over"}
 print(dic1.keys()) # returns the keys, but is unsorted/indexing not supported (not a list) (but you can still iterate over it in a for loop)
 print(list(dic1.keys()))
@@ -184,3 +200,7 @@ print("=======================================================================")
 
 #Python Dataclasses using Dataclass decorator #TODO
 # https://www.youtube.com/watch?v=vRVVyl9uaZc (If you're not using Python DATA CLASSES yet, you should 🚀)
+print("=======================================================================")
+
+#Some stuff on odd variable operations, IE: Multiplying a list #TODO
+print([1]*3)

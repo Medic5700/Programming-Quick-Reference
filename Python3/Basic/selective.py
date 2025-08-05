@@ -1,28 +1,31 @@
-'''
+"""
 Author: Medic5700
 
 if statments and comparisons
+"""
+#TODO include stuff on python match statements (IE: think of python pattern matching the statements instead of performing boolean logic) ( https://www.youtube.com/watch?v=ASRqxDGutpA )
+    #TODO match statement stuff ( https://www.youtube.com/watch?v=-gf4z3g71Mg )
 '''
+#Boolean operators
+    <                                   - less then
+    <=                                  - less then or equal
+    >                                   - greater then
+    >=                                  - greater then or equal
+    ==                                  - equal
+    !=                                  - not equal
+    and                                 - and
+    or                                  - or
+    not                                 - not
 
-'''Boolean operators
-<    - less then
-<=   - less then or equal
->    - greater then
->=   - greater then or equal
-==   - equal
-!=   - not equal
-and  - and
-or   - or
-not  - not
+    all(list)                           - applies AND to a list of booleans, returns a single boolean
+    any(list)                           - applies OR to a list of booleans, returns a single boolean
 
-all(list)- applies AND to a list of booleans, returns a single boolean
-any(list)- applies OR to a list of booleans, returns a single boolean
-
-in       - used to see if something is 'in' another array/object
-not in   - 
-is       - used to see if something is the same as another object
-is not   - 
+    in                                  - used to see if something is 'in' another array/object
+    not in                              - 
+    is                                  - used to see if something is the same as another object
+    is not                              - 
 '''
+#TODO include example use of above operators
 
 i : int
 for i in range(10):
@@ -96,5 +99,5 @@ print(f"a is b: {a is b}") # while a and b have contain the same values, they ar
 print(f"a is b: {a is c}") # a and c point to the same object, therefor 'a is c' is True
 
 print("=======================================================================")
-#switch/cases statement (New in Python 3.10) #TODO
+#switch/cases statement (New in Python 3.10) #TODO ( https://youtu.be/-79HGfWmH_w?t=89 )
 # https://stackoverflow.com/questions/60208/replacements-for-switch-statement-in-python

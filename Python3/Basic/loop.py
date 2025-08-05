@@ -3,6 +3,8 @@ Author: Medic5700
 
 Everything loops
 '''
+#TODO include stuff on using zip(), enumerate(), iterate(), filter() built-ins
+#TODO chained compairsons IE: x < y < z actually means ((z < y) and (y < z)) ( https://www.youtube.com/watch?v=M3GAJ1AIIlA )
 
 i : int # Note: this is how to properly annotate the itterator for a 'for loop', just before the 'for loop'
 for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]: # for iterates over a list, as opposed to in C where you would iterate over a mathimaticle progression of numbers
@@ -10,18 +12,19 @@ for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]: # for iterates over a list, as opposed 
 print()
     
 i : int
-for i in range(0,10): # range is usfull for generating lists NOTE: range doesn't include last number
+for i in range(0, 10): # range is usfull for generating lists NOTE: range doesn't include last number
     print("Loop 1 iteration " + str(i))
 print()
 
 i : int
-for i in range(10,-1,-1): # making a list, and going in reverse
+for i in range(10, -1, -1): # making a list, and going in reverse
     print("Loop 2 iteration " + str(i))
 print()
 
-for _ in range(0,10): # if the itterator isn't relavent, you can use the null veriable '_'
+for _ in range(0, 10): # if the itterator isn't relavent, you can use the null veriable '_'
     print("Loop 3 iteration not relavent") 
 print()
+print("=======================================================================")
 
 iteration : int
 object : str

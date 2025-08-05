@@ -1,13 +1,18 @@
-'''
+"""
 Author: Medic5700
 
 Stuff on Strings
-'''
+"""
 
+#TODO include stuff on concatinating strings in a large large for loop using io.StringIO. IE: replace 'x += "text"' with 'x = io.StringIO(); x.write("text")' ( https://youtu.be/E8NijUYfyus?t=127 )
+
+#TODO include nested quotes "hello 'world'"
 string1 : str = 'Hello'
-string2 : str = "Hello" # you can use both single quotes or double quotes for strings (don't mix them up)
+string2 : str = "Hello" # you can use both single quotes or double quotes for strings (don't mix them up in the same string)
 print("Hello\nWorld") # '\' is the escape character
 
+#TODO show output of print in the source code
+#TODO include rb'Hello\nWorld'
 print(r"Hello\nWorld") # can use a "raw string" by appending an 'r' before the first quote, escape characters in the string are not treated as escape characters
 print(f"Hello World {123}") # this is an f-string, a more convenient and unsterstandable way to include values into a string.
 print(b'Hello World') # this is a byte array, not a string. see 'variable.py' for more information
@@ -67,6 +72,7 @@ print("A Well Spaced Table: {0:8}{1:8.3f}{2:8d}".format(25, 25/7, 125)) # number
 print("=======================================================================")
 
 #TODO add stuff on f-strings
+#TODO some notes on f-strings ( https://www.youtube.com/watch?v=BxUxX1Ku1EQ )
 # Note: str() is implicidly called for anything inside the brackets
 print(f"An F-String")
 print(f"An F-String with a number '{1}'")

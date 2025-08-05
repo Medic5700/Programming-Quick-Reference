@@ -8,6 +8,9 @@ Introduction Python basics
 """Another block comment"""
 # another comment
 
+#TODO include stuff on the 'walrus operator', IE: 'print(a := 5)' both creates the variable 'a' but also returns that value to print() resulting in '5' being printed
+#TODO explain imports more
+
 import sys
 import getopt
 
@@ -21,8 +24,7 @@ if __name__ == '__main__': # used to signify the main of a program, good practic
     print(None) # 'None' is the equivilent of null
     if (True):
         pass # a do nothing statment, litterally does nothing, but used so it doesn't break the parser
-
-    #===========================================================================
+    print("===================================================================")
     
     # access the arguments the old way
     # uses import sys
@@ -44,35 +46,32 @@ if __name__ == '__main__': # used to signify the main of a program, good practic
             print("some help text")
     print(opts)
     print(args)
-
-    #===========================================================================
+    print("===================================================================")
 
     # some keyword stuff
     assert 2 == 2 # asserts a logic statement, and throws an error if false. C
     # an be used during development to check that variables are holding expected values. Some runtime optimizations allow the ignoring of assertions while interpriting.
-
-    #===========================================================================
+    print("===================================================================")
 
     # you can implicidly not end a python interpriter line using brackets, commas, etc
     print(
-        "Implicid",
-        "not end line"
+        "Implicit",
+        " not end line"
         )
 
     # you can explicidly not end a python interpriter line using the '\' at the end of a line
-    print("Explicid" \
+    print("Explicit" \
           + " not end line" \
           )
+    print("===================================================================")
 
-    #===========================================================================
     print(10_000) # you can put underscores in number litterals to increase readability without effecting the numbers
     print(0xff_ff)
+    print("===================================================================")
 
-    #===========================================================================
     # by convention, the '_' is used as a null variable, IE: you can dump unneeded data into it
     for _ in range(10): # here, the '_' is not used except for itteration, and thus, does not need a name, hence why '_' is used
         print("hello")
-    a = (1, 2, 3)
-    t1, _, _ = a # here the '_' is used to ignore the last two values in the tuple
+    t1, _, _ = (1, 2, 3) # here the '_' is used to ignore the last two values in the tuple
     print(t1)
     # note: '_' is still a valid variable name, and you can read data from it, but don't

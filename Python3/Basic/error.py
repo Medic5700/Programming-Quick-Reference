@@ -81,8 +81,9 @@ except myError as e:
 print("=======================================================================")
 
 # Using NotImplementedError
-# usefull duruing development to indicate that a method has not been implemented yet, is in progress, etc
+# usefull during development to indicate that a method has not been implemented yet, is in progress, etc
 def addNumbers(a : int, b : int):
     raise NotImplementedError
 
+#TODO catch the error to prevent the error halting the program
 print(addNumbers(1,2))
