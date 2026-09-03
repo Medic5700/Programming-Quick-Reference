@@ -132,6 +132,27 @@ class TestD(unittest.TestCase):
         self.array.append(5)
         self.assertEqual(self.array, [1, 2, 3, 5])
     
+class TestE(unittest.TestCase):
+    """Demonstrate @unittest.skip() and @unittest.skipIf()
+
+    https://docs.python.org/3/library/unittest.html#unittest.skip
+    https://docs.python.org/3/library/unittest.html#unittest.skipIf
+    """
+
+    @unittest.skip("Reason") # testE1 is skipped
+    def testE1(self):
+        """
+        https://docs.python.org/3/library/unittest.html#unittest.skip
+        """
+        self.assertEqual(True, True)
+
+    @unittest.skipIf(True == True, "Reason") # testE2 is skipped when the condition is true
+    def testE2(self):
+        """
+        https://docs.python.org/3/library/unittest.html#unittest.skipIf
+        """
+        self.assertEqual(True, True)
+
 if __name__ == "__main__":
     
     # unittest.main() #This will run the test cases. Note: will exit python upon completion
