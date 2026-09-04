@@ -35,7 +35,7 @@ for i in range(10):
         print("if statement 0 option 1")
     else:
         print("if statement 0 option 2")
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 # some stuff with sets
 if 1 in [1, 2, 3, 4, 5]: # tests if an element is in a container object
@@ -52,7 +52,7 @@ if [1, 2, 3] == [1, 2, 3]:
     print("if statement 3 = true, container objects contian the same data")
 else:
     print("if statement 3 = false, the container objects do NOT contain the same data")
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 # a one line if statment, usefull for list comprehensions
 print("if statement 4 = true") if (1 in [1,2,3]) else print("if statment 4 = false") # this is equivilent to the below
@@ -74,7 +74,7 @@ temp = "if statement 5 = true" if False else temp = "if statement 5 = false"
 '''
 print(temp)
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 temp : list[bool] = [True, True, False, True]
 if all(temp) == True:
@@ -84,7 +84,7 @@ if any(temp) == True:
 else:
     print("if statement 6 = false")
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 # The difference between '==' and 'is'
 # '==' is for value equality, IE: is the value the same? 'is' is for reference equality, IE: do they point to the same object in memory?
@@ -98,6 +98,6 @@ print(f"a == c: {a == c}")
 print(f"a is b: {a is b}") # while a and b have contain the same values, they are not the same object
 print(f"a is b: {a is c}") # a and c point to the same object, therefor 'a is c' is True
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 #switch/cases statement (New in Python 3.10) #TODO ( https://youtu.be/-79HGfWmH_w?t=89 )
 # https://stackoverflow.com/questions/60208/replacements-for-switch-statement-in-python

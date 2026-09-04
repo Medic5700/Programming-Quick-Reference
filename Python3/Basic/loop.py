@@ -24,13 +24,13 @@ print()
 for _ in range(0, 10): # if the itterator isn't relavent, you can use the null veriable '_'
     print("Loop 3 iteration not relavent") 
 print()
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 iteration : int
 object : str
 for iteration, object in enumerate(['a', 'b', 'c', 'd']): # enumerate allows you to track the itteration number while going through a for loop
     print("Loop 4 iteration " + str(iteration) + "\tobject = " + str(object))
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 i : int = 0
 while (True):
@@ -46,7 +46,7 @@ for i in range(0, 10):
     if i < 9:
         continue # 'continue' will immediatly execute the next iteration of the loop
     print("----------Loop 6 finished")
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
     
 i : int
 for i in range(0, 10):
@@ -61,5 +61,5 @@ while(i < 10):
     i = i + 1
 else:
     print("----------Loop 8 finished")
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
     

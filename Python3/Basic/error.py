@@ -14,7 +14,7 @@ else: # optional
 finally: # optional
     # will always execute after everything even if any exceptions are raised, 'finally' will run, and the exception will be re-raised
     print("Error 0 => temp = " + str(temp))
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 try:
     temp = 2/0
@@ -43,7 +43,7 @@ OS Errors
 
     exception NotImplementedError - Raised when a method has not been implemented yet.
 '''
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 # this one allows you to see what error information is given
 try:
@@ -63,7 +63,7 @@ try:
 except Exception as i:
     print("Error 4: Raised a ZeroDivisionError with information")
     print(i)
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #creating an error class and raising it
 class myError(Exception):
@@ -78,7 +78,7 @@ try:
 except myError as e:
     print("Error 5: raised an error = " + str(e.x))
     print(e)
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 # Using NotImplementedError
 # usefull during development to indicate that a method has not been implemented yet, is in progress, etc

@@ -24,7 +24,7 @@ if __name__ == '__main__': # used to signify the main of a program, good practic
     print(None) # 'None' is the equivilent of null
     if (True):
         pass # a do nothing statment, litterally does nothing, but used so it doesn't break the parser
-    print("===================================================================")
+    print("====================================================".ljust(80, "="))
     
     # access the arguments the old way
     # uses import sys
@@ -46,12 +46,12 @@ if __name__ == '__main__': # used to signify the main of a program, good practic
             print("some help text")
     print(opts)
     print(args)
-    print("===================================================================")
+    print("====================================================".ljust(80, "="))
 
     # some keyword stuff
     assert 2 == 2 # asserts a logic statement, and throws an error if false. C
     # an be used during development to check that variables are holding expected values. Some runtime optimizations allow the ignoring of assertions while interpriting.
-    print("===================================================================")
+    print("====================================================".ljust(80, "="))
 
     # you can implicidly not end a python interpriter line using brackets, commas, etc
     print(
@@ -63,11 +63,11 @@ if __name__ == '__main__': # used to signify the main of a program, good practic
     print("Explicit" \
           + " not end line" \
           )
-    print("===================================================================")
+    print("====================================================".ljust(80, "="))
 
     print(10_000) # you can put underscores in number litterals to increase readability without effecting the numbers
     print(0xff_ff)
-    print("===================================================================")
+    print("====================================================".ljust(80, "="))
 
     # by convention, the '_' is used as a null variable, IE: you can dump unneeded data into it
     for _ in range(10): # here, the '_' is not used except for itteration, and thus, does not need a name, hence why '_' is used

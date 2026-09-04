@@ -10,13 +10,13 @@ test = input("input test:") # some input
 print("The ", end="") # can specify what print ends the line with, in this case nothing
 print("input is = " + test)
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 print("printing with str:   " + str("test \t\t test \u25a0"))
 print("printing with repr:  " + repr("test \t\t test \u25a0")) # repr is like casting with str, but returns a human readable string in cases with standard escape characters
 print("printing with ascii: " + ascii("test \t\t test \u25a0")) # ascii returns a string, but also converts all characters (think unicod) into a human readable string
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #some stuff on files
 f1 = open("test.log", "w", encoding="utf-8")
@@ -50,19 +50,19 @@ seek(offset, from_what) - seek to (offset) in file realitive to (from_what)[0=st
 tell()     - returns current file position
 close()    - closes the file
 '''
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 #TODO some stuff on the 'with' statement ( https://www.youtube.com/watch?v=V6IX3k8PDBc )
 # https://www.geeksforgeeks.org/with-statement-in-python/
 #TODO some common exceptions when opening a file
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #some basic stuff on reading webpages
 import urllib.request # for url stuff
 webpageObject = urllib.request.urlopen("http://www.google.com/robots.txt")
 data = (webpageObject.read()).decode('utf-8')
 print("Data from www.google.com/robots.txt:\n" + data)
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #some basic stuff on reading/writing json
 # https://docs.python.org/3/library/json.html#module-json
@@ -75,16 +75,16 @@ print(json.dumps(anObject, sort_keys=True, indent=4))
 newObject = json.loads(json.dumps(anObject)) # turns a string back into an object
 print(newObject)
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #some basic stuff on reading/writing csv files
 # https://docs.python.org/3/library/csv.html
 import csv
 #TODO
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #some basic stuff using pickle
 # https://docs.python.org/3/library/pickle.html#module-pickle
 import pickle
 #TODO
-print("=======================================================================")
+print("========================================================".ljust(80, "="))

@@ -45,7 +45,7 @@ print(min(2, 5))                        # output 2
 print(max(2, 5))                        # output 5
 print(round(10.123456789))              # output 10
 print(round(10.123456789, 2))           # output 10.12
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 ''' 
 #Bitwise operators
@@ -78,7 +78,7 @@ length.
 x : int = 10
 print(f" {x} = {[1 if (2**i & x) else 0 for i in range(7, -1, -1)]} -> bin({x}) = {bin(x)}")
 print(f"~{x} = {[1 if (2**i & ~x) else 0 for i in range(7, -1, -1)]} -> bin(~{x}) = {bin(~x)}")
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 '''
 #Different number notations
@@ -110,7 +110,7 @@ print(2+5j)                             # output (2+5j)
 # Note: can include underscores in numbers to imrpove readability, the underscores are ignored
 print(1_000)                            # output 1000
 print(0b0000_0000_0000_1111)            # output 15
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 '''
 Note: python has a limit on converting large numbers (4300 digits) to strings 
@@ -128,7 +128,7 @@ except Exception as e:
     print(e)
     # Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 '''
 #Python3 math module
@@ -154,14 +154,14 @@ print(math.isqrt(4))                    # output 2
 print(math.cos(math.pi))                # output -1.0
 print(math.sin(math.pi / 2))            # output 1.0
 print(math.tan(math.pi / 4))            # output 0.9999999999999999
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 '''
 Python3 also has support for Decimal, Fraction, and Complex Numbers #TODO ( https://docs.python.org/3/library/decimal.html#decimal.Decimal )
 '''
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 '''
 @   - used for matrix multiplication, but no default python objects support it (but the numpy module does)
 '''
-print("=======================================================================")
+print("========================================================".ljust(80, "="))

@@ -62,7 +62,7 @@ print(varDic['t'])
 #TODO frozensets, just like a set except it can't be mutated
 
 #TODO add in some unicode stuff
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 '''
 #TODO
@@ -74,7 +74,7 @@ _ = 'test' # this is a valid variable name, and the convention is to use it as n
 a, _, c = [1,2,3] # an example of a good use, discarding the second list element
 print(a, c)
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #Variable Annotations https://www.python.org/dev/peps/pep-0526/
 #variable typing, python allows typing hints that IDEs and type-checkers can enforce, BUT it is not enforced at runtime
@@ -92,6 +92,7 @@ from typing import Any, Callable, Dict, List, Literal, Optional, Set, Tuple
 # https://peps.python.org/pep-0585/
 varList : List[int] = [1, 2, 3, 4]
 varList : Tuple[int, ...] = [1, 2, 3, 4] # Note: the ellipsis only works for Tuple, not for List
+varList : List[Callable[[list[int]], int]] = [min] # Note: Callable must be used as Callable[[arg, ...], result]
 
 from typing import NoReturn
 
@@ -100,7 +101,7 @@ from typing import NoReturn
 # https://docs.python.org/3/library/typing.html#typing.Generic
 # https://docs.python.org/3/library/typing.html#typing.TypeVar
 #TODO TypeAlias, allowing to use a class as a type in itself while it's being defined ( https://youtu.be/mvJuxowIwIc?t=251 )
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #TODO redundant?
 # https://docs.python.org/3/tutorial/datastructures.html#sets
@@ -110,17 +111,17 @@ varSet : set = set('abcdddde') # a set, holds an unordered set of unique element
 varSet : set = {1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6}
 #print(varSet[0]) # you can't access sets like this
 print(varSet) # note the duplicate elements are not printed
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #multidimensional arrays aren't exactly standard in python, but can be made using an array of an array
 # Note: add-ons for python (numpy) allows support for large multidimensional arrays
 varArray2D : list[list[None]] = [[None for j in range(8)] for i in range(8)] # an example of making a two dimensional with all elements initilized to None, using 'list comprehensions'
 print(varArray2D[0][0])
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 import copy
 varArray2Db : list[list[None]] = copy.deepcopy(varArray2D) # instead of copying the reference of varArray2D, deepcopy(x) makes a complete element by element copy of x, etc...
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #TODO should be at top of file?
 #list slices
@@ -141,7 +142,7 @@ print(varList.pop(0)) # removes and returns xth element of list
 print(varList.index(5)) # searches for x in list, returns index. Raises error if x isn't in list
 del varList[0] # 'del' can be used to delete a single element
 del varList # 'del' can also be used to delete an entire variable
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #list comprehensions example from https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 example1 : list[tuple[int]] = [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y] #this is equivalent to the below example2
@@ -163,7 +164,7 @@ for i in range(8):
 print(example4)
 # both 'example3' and 'example4' are identicle
 
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #sets 
 # https://docs.python.org/3/tutorial/datastructures.html#sets
@@ -177,7 +178,7 @@ print(set1 ^ set2) # xor
 i : int
 for i in sorted(set1): # a way to loop over a set, note: sorted returns a lists containing elements in the set, but leaves set unchanged
     print(str(i))
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #dictionaries
 #TODO include more examples of looping over dictionaries
@@ -187,7 +188,7 @@ print(list(dic1.keys()))
 print(sorted(dic1.keys()))
 for i,j in dic1.items(): # when looping over a dictionary, can use this to get both the key and data at the same time
     print("dic key '" + str(i) + "' contains data '" + str(j) + "'")
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
     
 #some stuff on bytes
 import sys
@@ -196,11 +197,11 @@ print(bytes([10])) # alternativly, you can use this, since 'bytes' is supposed t
 print(bytes([10, 20, 30, 40]))
 print(bytes(10)) # be carefull, this will actually make an array n bytes long instead of converting it
 print((bytes([2, 4, 6, 8, 10, 12, 14, 16])).hex()) # convert byte array to hex string
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #Python Dataclasses using Dataclass decorator #TODO
 # https://www.youtube.com/watch?v=vRVVyl9uaZc (If you're not using Python DATA CLASSES yet, you should 🚀)
-print("=======================================================================")
+print("========================================================".ljust(80, "="))
 
 #Some stuff on odd variable operations, IE: Multiplying a list #TODO
 print([1]*3)
