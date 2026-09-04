@@ -13,6 +13,8 @@ Some stuff on python functions
     #TODO include use case of using a 'generator comprehension' to filter stuff ( https://youtu.be/tmeKsb2Fras?t=488 )
 #TODO typing.override function decorator to indicate overriding an implimentation of a function from a parent class
 
+from typing import Callable
+
 #random odds and ends #TODO
 # function attributes
 def funcX(a):
@@ -42,7 +44,7 @@ def func1A(a : int, b : int, c : int) -> None: # function decliration, with full
     return # this is valid, will return None (which is usually silently ignored)
     # functions don't need to have a return statment, but all functions return "None" if there is no return statment (which is usually silently ignored)
     
-global_t1 = 10
+global_t1 : int = 10
 func1A(1, 2, 3)
 
 def func1B(a : int, b : int, c : int) -> None:
@@ -50,18 +52,18 @@ def func1B(a : int, b : int, c : int) -> None:
     # in this case, even though 'global_t1' is a global variable, I am explicidly creating a local variable of the same name which will not effect the global variable
     print("Function 1B: " + str(global_t1))
 
-global_t1 = 10
+global_t1 : int = 10
 func1B(1, 2, 3)
 print("Global = " + str(global_t1) + "\tNote: global variable not effected") # the global variable is unaffected
 print("=======================================================================")
 
-def func2(a=10): # default values for arguments
+def func2(a : int = 10): # default values for arguments
     print("Function 2: " + str(a))
     
 func2()
 print("=======================================================================")
 
-def func3(a, b=2, c=3, d=4):
+def func3(a : int, b : int = 2, c : int = 3, d : int = 4):
     print("Function 3: a,b,c,d = " + str(a) + "," + str(b) + "," + str(c) + "," + str(d))
     
 # you call functions using 'keyword arguments'
@@ -105,18 +107,19 @@ def func6A(t1):
     print("Function 6 creating Function 6")
     return lambda x:x+t1 # lambda functions created without a name on the fly
     
-func6B = func6A(10) # here is a function being assigned to a variable
+func6B : Callable[[int], Callable[[int], int]] = func6A(10) # here is a function being assigned to a variable
 print("Function 6 in use " + str(func6B(20))) # and here it is being used
 print("=======================================================================")
 
 #some stuff using partial functions
 import functools # allows for fancier manipulation of functions
 
-def funcSum(a, b, c, d):
+def funcSum(a :int , b : int, c : int, d : int):
     """sums a,b,c,d"""
-    return a+b+c+d
+    return a + b + c + d
 
 partialFunction = functools.partial(funcSum)
+i : int
 for i in [0, 1, 2, 3]:
     partial = functools.partial(partialFunction,i)
 print("partial functions: " + str(partialFunction(1, 2, 3, 4)))
@@ -127,24 +130,25 @@ print("=======================================================================")
 # https://realpython.com/introduction-to-python-generators/
 def generator1():
     """produces the fibonacci sequence"""
-    a = 0
+    a : int = 0
     yield a # yield is life return, only instead of exiting the function, it pauses the function at the line, and reterns there when called
-    b = 1
+    b : int = 1
     yield b
     while True:
-        c = a + b
+        c : int = a + b
         yield c
         a = b
         b = c
         
 gen1 = generator1()
+i : int
 for i in range(0,10):
     print("Generator1: " + str(next(gen1))) # next calls the generator to run until the next yeild
 print("=======================================================================")
     
 def generator2():
     """counts by 8 until 100"""
-    i = 0
+    i : int = 0
     while True:
         yield i
         i += 8
@@ -161,14 +165,15 @@ print("=======================================================================")
         
 def generator3():
     """Takes in a number, and returns the rolling sum"""
-    t = 0
+    t : int = 0
     while True:
-        i = (yield t) # here, yield can also take in a value
+        i : int = (yield t) # here, yield can also take in a value
         if i != None:
             t += i
 
 gen3 = generator3()
 next(gen3) # sends a None to the generator to get it started?
+i : int
 for i in range(0, 11):
     print("Gnerator3: " + str(gen3.send(i))) # gen3.send() sends a value to the generator
 gen3.close() # closes the generator
@@ -176,7 +181,9 @@ print("=======================================================================")
 
 # this is just like a list comprehension, only it's a generator and thus takes less memory
 # note: generators take less memory, but are slower then list comprehensions
+i : int
 generater4 = (i**2 for i in range(10)) 
+i : int
 for i in generater4:
     print("Generator4: " + str(i))
 print("=======================================================================")
